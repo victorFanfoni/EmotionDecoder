@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">EmotionDecoder</string>
+    <string name="comecar">Começar</string>
+    <string name="titulo">EmotionDecoder</string>
+    <string name="subtitulo">Decodifique suas emoções e desbloqueie seu potencial</string>
+    <string name="nome">Nome</string>
+    <string name="e_mail">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="criar_conta">Criar Conta</string>
+    <string name="como_voc_est_se_sentindo_agora">Como você está se sentindo agora?</string>
+    <string name="coment_rios_adicionais_opcional">Comentários adicionais (opcional)</string>
+    <string name="sugest_es">Sugestões:</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="digite_seu_e_mail">Digite seu e-mail</string>
+    <string name="digite_sua_senha">Digite sua senha</string>
+    <string name="digite_sua_senha_novamente">Digite sua senha novamente</string>
+    <string name="entrar">Entrar</string>
+    <string name="esqueci_minha_senha">Esqueci minha senha</string>
+    <string name="feedback">Feedback</string>
+</resources>

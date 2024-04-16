@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nome"
+        android:textSize="18sp"
+        android:layout_marginTop="32dp"/>
+
+    <EditText
+        android:id="@+id/edit_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_nome"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        android:hint="@string/digite_seu_nome"/>
+
+    <TextView
+        android:id="@+id/text_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/e_mail"
+        android:textSize="18sp"
+        android:layout_below="@id/edit_nome"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_email"
+        android:layout_marginTop="8dp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/digite_seu_e_mail"/>
+
+    <TextView
+        android:id="@+id/text_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/senha"
+        android:textSize="18sp"
+        android:layout_below="@id/edit_email"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/edit_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_senha"
+        android:layout_marginTop="8dp"
+        android:inputType="textPassword"
+        android:hint="@string/digite_sua_senha"/>
+
+    <TextView
+        android:id="@+id/text_confirmar_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirmar_senha"
+        android:textSize="18sp"
+        android:layout_below="@id/edit_senha"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/edit_confirmar_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_confirmar_senha"
+        android:layout_marginTop="8dp"
+        android:inputType="textPassword"
+        android:hint="@string/digite_sua_senha_novamente"/>
+
+    <Button
+        android:id="@+id/button_criar_conta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_confirmar_senha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:text="@string/criar_conta" />
+
+    <Button
+        android:id="@+id/button_entrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_criar_conta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="@string/entrar" />
+
+    <TextView
+        android:id="@+id/text_esqueci_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_entrar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="@string/esqueci_minha_senha" />
+
+</RelativeLayout>

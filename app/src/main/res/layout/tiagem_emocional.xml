@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text_pergunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:text="@string/como_voc_est_se_sentindo_agora"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_emocoes"
+        android:layout_width="221dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_pergunta"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="85dp"
+        android:orientation="horizontal">
+
+        <!-- Emojis representando diferentes emoções -->
+        <RadioButton
+            android:id="@+id/radio_alegria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="😊" />
+
+        <RadioButton
+            android:id="@+id/radio_tristeza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="😢" />
+
+        <RadioButton
+            android:id="@+id/radio_raiva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="😡" />
+
+        <RadioButton
+            android:id="@+id/radio_medo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="😨" />
+
+        <!-- Adicione mais emojis conforme necessário para representar outras emoções -->
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edit_comentarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_group_emocoes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:hint="@string/coment_rios_adicionais_opcional" />
+
+</RelativeLayout>

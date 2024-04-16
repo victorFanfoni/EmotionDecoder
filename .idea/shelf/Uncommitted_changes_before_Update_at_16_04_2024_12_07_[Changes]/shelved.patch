@@ -1,0 +1,3511 @@
+Index: ../Aplication/app/proguard-rules.pro
+===================================================================
+diff --git a/../Aplication/app/proguard-rules.pro b/../Aplication/app/proguard-rules.pro
+deleted file mode 100644
+--- a/../Aplication/app/proguard-rules.pro	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,21 +0,0 @@
+-# Add project specific ProGuard rules here.
+-# You can control the set of applied configuration files using the
+-# proguardFiles setting in build.gradle.
+-#
+-# For more details, see
+-#   http://developer.android.com/guide/developing/tools/proguard.html
+-
+-# If your project uses WebView with JS, uncomment the following
+-# and specify the fully qualified class name to the JavaScript interface
+-# class:
+-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+-#   public *;
+-#}
+-
+-# Uncomment this to preserve the line number information for
+-# debugging stack traces.
+-#-keepattributes SourceFile,LineNumberTable
+-
+-# If you keep the line number information, uncomment this to
+-# hide the original source file name.
+-#-renamesourcefileattribute SourceFile
+\ No newline at end of file
+Index: ../DrinkSmart/gradle.properties
+===================================================================
+diff --git a/../DrinkSmart/gradle.properties b/../DrinkSmart/gradle.properties
+deleted file mode 100644
+--- a/../DrinkSmart/gradle.properties	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,23 +0,0 @@
+-# Project-wide Gradle settings.
+-# IDE (e.g. Android Studio) users:
+-# Gradle settings configured through the IDE *will override*
+-# any settings specified in this file.
+-# For more details on how to configure your build environment visit
+-# http://www.gradle.org/docs/current/userguide/build_environment.html
+-# Specifies the JVM arguments used for the daemon process.
+-# The setting is particularly useful for tweaking memory settings.
+-org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
+-# When configured, Gradle will run in incubating parallel mode.
+-# This option should only be used with decoupled projects. More details, visit
+-# http://www.gradle.org/docs/current/userguide/multi_project_builds.html#sec:decoupled_projects
+-# org.gradle.parallel=true
+-# AndroidX package structure to make it clearer which packages are bundled with the
+-# Android operating system, and which are packaged with your app's APK
+-# https://developer.android.com/topic/libraries/support-library/androidx-rn
+-android.useAndroidX=true
+-# Kotlin code style for this project: "official" or "obsolete":
+-kotlin.code.style=official
+-# Enables namespacing of each library's R class so that its R class includes only the
+-# resources declared in the library itself and none from the library's dependencies,
+-# thereby reducing the size of the R class for that library
+-android.nonTransitiveRClass=true
+\ No newline at end of file
+Index: ../Aplication/settings.gradle.kts
+===================================================================
+diff --git a/../Aplication/settings.gradle.kts b/../Aplication/settings.gradle.kts
+deleted file mode 100644
+--- a/../Aplication/settings.gradle.kts	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,17 +0,0 @@
+-pluginManagement {
+-    repositories {
+-        google()
+-        mavenCentral()
+-        gradlePluginPortal()
+-    }
+-}
+-dependencyResolutionManagement {
+-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+-    repositories {
+-        google()
+-        mavenCentral()
+-    }
+-}
+-
+-rootProject.name = "Aplication"
+-include(":app")
+Index: ../Aplication/build.gradle.kts
+===================================================================
+diff --git a/../Aplication/build.gradle.kts b/../Aplication/build.gradle.kts
+deleted file mode 100644
+--- a/../Aplication/build.gradle.kts	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,5 +0,0 @@
+-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+-plugins {
+-    id("com.android.application") version "8.1.1" apply false
+-    id("org.jetbrains.kotlin.android") version "1.9.0" apply false
+-}
+\ No newline at end of file
+Index: ../DrinkSmart/.idea/vcs.xml
+===================================================================
+diff --git a/../DrinkSmart/.idea/vcs.xml b/../DrinkSmart/.idea/vcs.xml
+deleted file mode 100644
+--- a/../DrinkSmart/.idea/vcs.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../ControleDeGastos/app/.gitignore
+===================================================================
+diff --git a/../ControleDeGastos/app/.gitignore b/../ControleDeGastos/app/.gitignore
+deleted file mode 100644
+--- a/../ControleDeGastos/app/.gitignore	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,1 +0,0 @@
+-/build
+\ No newline at end of file
+Index: ../DrinkSmart/settings.gradle.kts
+===================================================================
+diff --git a/../DrinkSmart/settings.gradle.kts b/../DrinkSmart/settings.gradle.kts
+deleted file mode 100644
+--- a/../DrinkSmart/settings.gradle.kts	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,17 +0,0 @@
+-pluginManagement {
+-    repositories {
+-        google()
+-        mavenCentral()
+-        gradlePluginPortal()
+-    }
+-}
+-dependencyResolutionManagement {
+-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+-    repositories {
+-        google()
+-        mavenCentral()
+-    }
+-}
+-
+-rootProject.name = "DrinkSmart"
+-include(":app")
+Index: ../DrinkSmart/app/src/main/res/values/themes.xml
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/res/values/themes.xml b/../DrinkSmart/app/src/main/res/values/themes.xml
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/res/values/themes.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,5 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-
+-    <style name="Theme.DrinkSmart" parent="android:Theme.Material.Light.NoActionBar" />
+-</resources>
+\ No newline at end of file
+Index: ../ControleDeGastos/.gitignore
+===================================================================
+diff --git a/../ControleDeGastos/.gitignore b/../ControleDeGastos/.gitignore
+deleted file mode 100644
+--- a/../ControleDeGastos/.gitignore	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,15 +0,0 @@
+-*.iml
+-.gradle
+-/local.properties
+-/.idea/caches
+-/.idea/libraries
+-/.idea/modules.xml
+-/.idea/workspace.xml
+-/.idea/navEditor.xml
+-/.idea/assetWizardSettings.xml
+-.DS_Store
+-/build
+-/captures
+-.externalNativeBuild
+-.cxx
+-local.properties
+Index: ../Aplication/app/src/main/java/com/fiap/aplication/MainActivity.kt
+===================================================================
+diff --git a/../Aplication/app/src/main/java/com/fiap/aplication/MainActivity.kt b/../Aplication/app/src/main/java/com/fiap/aplication/MainActivity.kt
+deleted file mode 100644
+--- a/../Aplication/app/src/main/java/com/fiap/aplication/MainActivity.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,24 +0,0 @@
+-package com.fiap.aplication
+-
+-import android.os.Bundle
+-import android.os.PersistableBundle
+-import android.view.View
+-import android.widget.Button
+-import androidx.appcompat.app.AppCompatActivity
+-import android.widget.Toast
+-
+-class MainActivity: AppCompatActivity()  {
+-    override fun onCreate(savedInstanceState: Bundle?) {
+-        super.onCreate(savedInstanceState)
+-        setContentView(R.layout.activity_main)
+-        supportActionBar?.hide()
+-
+-        val button = findViewById<Button>(R.id.button)
+-
+-        button.setOnClickListener(object: View.OnClickListener{
+-            override fun onClick(view: View?) {
+-                Toast.makeText(this, "Botao apertado.", Toast.LENHT_SHORT).show()
+-            }
+-        })
+-    }
+-}
+\ No newline at end of file
+Index: ../Aplication/.gitignore
+===================================================================
+diff --git a/../Aplication/.gitignore b/../Aplication/.gitignore
+deleted file mode 100644
+--- a/../Aplication/.gitignore	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,15 +0,0 @@
+-*.iml
+-.gradle
+-/local.properties
+-/.idea/caches
+-/.idea/libraries
+-/.idea/modules.xml
+-/.idea/workspace.xml
+-/.idea/navEditor.xml
+-/.idea/assetWizardSettings.xml
+-.DS_Store
+-/build
+-/captures
+-.externalNativeBuild
+-.cxx
+-local.properties
+Index: ../ControleDeGastos/build.gradle.kts
+===================================================================
+diff --git a/../ControleDeGastos/build.gradle.kts b/../ControleDeGastos/build.gradle.kts
+deleted file mode 100644
+--- a/../ControleDeGastos/build.gradle.kts	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,5 +0,0 @@
+-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+-plugins {
+-    id("com.android.application") version "8.1.1" apply false
+-    id("org.jetbrains.kotlin.android") version "1.8.10" apply false
+-}
+\ No newline at end of file
+Index: ../Aplication/.idea/.gitignore
+===================================================================
+diff --git a/../Aplication/.idea/.gitignore b/../Aplication/.idea/.gitignore
+deleted file mode 100644
+--- a/../Aplication/.idea/.gitignore	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: ../DrinkSmart/app/src/main/java/com/fiap/drinksmart/MainActivity.kt
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/java/com/fiap/drinksmart/MainActivity.kt b/../DrinkSmart/app/src/main/java/com/fiap/drinksmart/MainActivity.kt
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/java/com/fiap/drinksmart/MainActivity.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,46 +0,0 @@
+-package com.fiap.drinksmart
+-
+-import android.os.Bundle
+-import androidx.activity.ComponentActivity
+-import androidx.activity.compose.setContent
+-import androidx.compose.foundation.layout.fillMaxSize
+-import androidx.compose.material3.MaterialTheme
+-import androidx.compose.material3.Surface
+-import androidx.compose.material3.Text
+-import androidx.compose.runtime.Composable
+-import androidx.compose.ui.Modifier
+-import androidx.compose.ui.tooling.preview.Preview
+-import com.fiap.drinksmart.ui.theme.DrinkSmartTheme
+-
+-class MainActivity : ComponentActivity() {
+-    override fun onCreate(savedInstanceState: Bundle?) {
+-        super.onCreate(savedInstanceState)
+-        setContent {
+-            DrinkSmartTheme {
+-                // A surface container using the 'background' color from the theme
+-                Surface(
+-                    modifier = Modifier.fillMaxSize(),
+-                    color = MaterialTheme.colorScheme.background
+-                ) {
+-                    Greeting("Android")
+-                }
+-            }
+-        }
+-    }
+-}
+-
+-@Composable
+-fun Greeting(name: String, modifier: Modifier = Modifier) {
+-    Text(
+-        text = "Hello $name!",
+-        modifier = modifier
+-    )
+-}
+-
+-@Preview(showBackground = true)
+-@Composable
+-fun GreetingPreview() {
+-    DrinkSmartTheme {
+-        Greeting("Android")
+-    }
+-}
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/main/res/xml/backup_rules.xml
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/res/xml/backup_rules.xml b/../ControleDeGastos/app/src/main/res/xml/backup_rules.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/res/xml/backup_rules.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,13 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?><!--
+-   Sample backup rules file; uncomment and customize as necessary.
+-   See https://developer.android.com/guide/topics/data/autobackup
+-   for details.
+-   Note: This file is ignored for devices older that API 31
+-   See https://developer.android.com/about/versions/12/backup-restore
+--->
+-<full-backup-content>
+-    <!--
+-   <include domain="sharedpref" path="."/>
+-   <exclude domain="sharedpref" path="device.xml"/>
+--->
+-</full-backup-content>
+\ No newline at end of file
+Index: ../DrinkSmart/app/proguard-rules.pro
+===================================================================
+diff --git a/../DrinkSmart/app/proguard-rules.pro b/../DrinkSmart/app/proguard-rules.pro
+deleted file mode 100644
+--- a/../DrinkSmart/app/proguard-rules.pro	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,21 +0,0 @@
+-# Add project specific ProGuard rules here.
+-# You can control the set of applied configuration files using the
+-# proguardFiles setting in build.gradle.
+-#
+-# For more details, see
+-#   http://developer.android.com/guide/developing/tools/proguard.html
+-
+-# If your project uses WebView with JS, uncomment the following
+-# and specify the fully qualified class name to the JavaScript interface
+-# class:
+-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+-#   public *;
+-#}
+-
+-# Uncomment this to preserve the line number information for
+-# debugging stack traces.
+-#-keepattributes SourceFile,LineNumberTable
+-
+-# If you keep the line number information, uncomment this to
+-# hide the original source file name.
+-#-renamesourcefileattribute SourceFile
+\ No newline at end of file
+Index: ../ControleDeGastos/.idea/misc.xml
+===================================================================
+diff --git a/../ControleDeGastos/.idea/misc.xml b/../ControleDeGastos/.idea/misc.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/.idea/misc.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,10 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/build/classes" />
+-  </component>
+-  <component name="ProjectType">
+-    <option name="id" value="Android" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../DrinkSmart/.gitignore
+===================================================================
+diff --git a/../DrinkSmart/.gitignore b/../DrinkSmart/.gitignore
+deleted file mode 100644
+--- a/../DrinkSmart/.gitignore	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,15 +0,0 @@
+-*.iml
+-.gradle
+-/local.properties
+-/.idea/caches
+-/.idea/libraries
+-/.idea/modules.xml
+-/.idea/workspace.xml
+-/.idea/navEditor.xml
+-/.idea/assetWizardSettings.xml
+-.DS_Store
+-/build
+-/captures
+-.externalNativeBuild
+-.cxx
+-local.properties
+Index: ../DrinkSmart/.idea/compiler.xml
+===================================================================
+diff --git a/../DrinkSmart/.idea/compiler.xml b/../DrinkSmart/.idea/compiler.xml
+deleted file mode 100644
+--- a/../DrinkSmart/.idea/compiler.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="CompilerConfiguration">
+-    <bytecodeTargetLevel target="17" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/ui/theme/Theme.kt
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/ui/theme/Theme.kt b/../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/ui/theme/Theme.kt
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/ui/theme/Theme.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,70 +0,0 @@
+-package com.fiap.controledegastos.ui.theme
+-
+-import android.app.Activity
+-import android.os.Build
+-import androidx.compose.foundation.isSystemInDarkTheme
+-import androidx.compose.material3.MaterialTheme
+-import androidx.compose.material3.darkColorScheme
+-import androidx.compose.material3.dynamicDarkColorScheme
+-import androidx.compose.material3.dynamicLightColorScheme
+-import androidx.compose.material3.lightColorScheme
+-import androidx.compose.runtime.Composable
+-import androidx.compose.runtime.SideEffect
+-import androidx.compose.ui.graphics.toArgb
+-import androidx.compose.ui.platform.LocalContext
+-import androidx.compose.ui.platform.LocalView
+-import androidx.core.view.WindowCompat
+-
+-private val DarkColorScheme = darkColorScheme(
+-    primary = Purple80,
+-    secondary = PurpleGrey80,
+-    tertiary = Pink80
+-)
+-
+-private val LightColorScheme = lightColorScheme(
+-    primary = Purple40,
+-    secondary = PurpleGrey40,
+-    tertiary = Pink40
+-
+-    /* Other default colors to override
+-    background = Color(0xFFFFFBFE),
+-    surface = Color(0xFFFFFBFE),
+-    onPrimary = Color.White,
+-    onSecondary = Color.White,
+-    onTertiary = Color.White,
+-    onBackground = Color(0xFF1C1B1F),
+-    onSurface = Color(0xFF1C1B1F),
+-    */
+-)
+-
+-@Composable
+-fun ControleDeGastosTheme(
+-    darkTheme: Boolean = isSystemInDarkTheme(),
+-    // Dynamic color is available on Android 12+
+-    dynamicColor: Boolean = true,
+-    content: @Composable () -> Unit
+-) {
+-    val colorScheme = when {
+-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+-            val context = LocalContext.current
+-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+-        }
+-
+-        darkTheme -> DarkColorScheme
+-        else -> LightColorScheme
+-    }
+-    val view = LocalView.current
+-    if (!view.isInEditMode) {
+-        SideEffect {
+-            val window = (view.context as Activity).window
+-            window.statusBarColor = colorScheme.primary.toArgb()
+-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
+-        }
+-    }
+-
+-    MaterialTheme(
+-        colorScheme = colorScheme,
+-        typography = Typography,
+-        content = content
+-    )
+-}
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/java/com/fiap/drinksmart/ui/theme/Type.kt
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/java/com/fiap/drinksmart/ui/theme/Type.kt b/../DrinkSmart/app/src/main/java/com/fiap/drinksmart/ui/theme/Type.kt
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/java/com/fiap/drinksmart/ui/theme/Type.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,34 +0,0 @@
+-package com.fiap.drinksmart.ui.theme
+-
+-import androidx.compose.material3.Typography
+-import androidx.compose.ui.text.TextStyle
+-import androidx.compose.ui.text.font.FontFamily
+-import androidx.compose.ui.text.font.FontWeight
+-import androidx.compose.ui.unit.sp
+-
+-// Set of Material typography styles to start with
+-val Typography = Typography(
+-    bodyLarge = TextStyle(
+-        fontFamily = FontFamily.Default,
+-        fontWeight = FontWeight.Normal,
+-        fontSize = 16.sp,
+-        lineHeight = 24.sp,
+-        letterSpacing = 0.5.sp
+-    )
+-    /* Other default text styles to override
+-    titleLarge = TextStyle(
+-        fontFamily = FontFamily.Default,
+-        fontWeight = FontWeight.Normal,
+-        fontSize = 22.sp,
+-        lineHeight = 28.sp,
+-        letterSpacing = 0.sp
+-    ),
+-    labelSmall = TextStyle(
+-        fontFamily = FontFamily.Default,
+-        fontWeight = FontWeight.Medium,
+-        fontSize = 11.sp,
+-        lineHeight = 16.sp,
+-        letterSpacing = 0.5.sp
+-    )
+-    */
+-)
+\ No newline at end of file
+Index: ../Aplication/app/src/main/res/xml/data_extraction_rules.xml
+===================================================================
+diff --git a/../Aplication/app/src/main/res/xml/data_extraction_rules.xml b/../Aplication/app/src/main/res/xml/data_extraction_rules.xml
+deleted file mode 100644
+--- a/../Aplication/app/src/main/res/xml/data_extraction_rules.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,19 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?><!--
+-   Sample data extraction rules file; uncomment and customize as necessary.
+-   See https://developer.android.com/about/versions/12/backup-restore#xml-changes
+-   for details.
+--->
+-<data-extraction-rules>
+-    <cloud-backup>
+-        <!-- TODO: Use <include> and <exclude> to control what is backed up.
+-        <include .../>
+-        <exclude .../>
+-        -->
+-    </cloud-backup>
+-    <!--
+-    <device-transfer>
+-        <include .../>
+-        <exclude .../>
+-    </device-transfer>
+-    -->
+-</data-extraction-rules>
+\ No newline at end of file
+Index: ../DrinkSmart/app/.gitignore
+===================================================================
+diff --git a/../DrinkSmart/app/.gitignore b/../DrinkSmart/app/.gitignore
+deleted file mode 100644
+--- a/../DrinkSmart/app/.gitignore	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,1 +0,0 @@
+-/build
+\ No newline at end of file
+Index: ../Aplication/.idea/compiler.xml
+===================================================================
+diff --git a/../Aplication/.idea/compiler.xml b/../Aplication/.idea/compiler.xml
+deleted file mode 100644
+--- a/../Aplication/.idea/compiler.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="CompilerConfiguration">
+-    <bytecodeTargetLevel target="17" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/androidTest/java/com/fiap/controledegastos/ExampleInstrumentedTest.kt
+===================================================================
+diff --git a/../ControleDeGastos/app/src/androidTest/java/com/fiap/controledegastos/ExampleInstrumentedTest.kt b/../ControleDeGastos/app/src/androidTest/java/com/fiap/controledegastos/ExampleInstrumentedTest.kt
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/androidTest/java/com/fiap/controledegastos/ExampleInstrumentedTest.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,24 +0,0 @@
+-package com.fiap.controledegastos
+-
+-import androidx.test.platform.app.InstrumentationRegistry
+-import androidx.test.ext.junit.runners.AndroidJUnit4
+-
+-import org.junit.Test
+-import org.junit.runner.RunWith
+-
+-import org.junit.Assert.*
+-
+-/**
+- * Instrumented test, which will execute on an Android device.
+- *
+- * See [testing documentation](http://d.android.com/tools/testing).
+- */
+-@RunWith(AndroidJUnit4::class)
+-class ExampleInstrumentedTest {
+-    @Test
+-    fun useAppContext() {
+-        // Context of the app under test.
+-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+-        assertEquals("com.fiap.controledegastos", appContext.packageName)
+-    }
+-}
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/res/drawable/ic_refresh.xml
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/res/drawable/ic_refresh.xml b/../DrinkSmart/app/src/main/res/drawable/ic_refresh.xml
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/res/drawable/ic_refresh.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,5 +0,0 @@
+-<vector android:height="24dp" android:tint="#FFFFFF"
+-    android:viewportHeight="24" android:viewportWidth="24"
+-    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+-    <path android:fillColor="@android:color/white" android:pathData="M17.65,6.35C16.2,4.9 14.21,4 12,4c-4.42,0 -7.99,3.58 -7.99,8s3.57,8 7.99,8c3.73,0 6.84,-2.55 7.73,-6h-2.08c-0.82,2.33 -3.04,4 -5.65,4 -3.31,0 -6,-2.69 -6,-6s2.69,-6 6,-6c1.66,0 3.14,0.69 4.22,1.78L13,11h7V4l-2.35,2.35z"/>
+-</vector>
+Index: ../Aplication/app/src/main/res/layout/activity_main.xml
+===================================================================
+diff --git a/../Aplication/app/src/main/res/layout/activity_main.xml b/../Aplication/app/src/main/res/layout/activity_main.xml
+deleted file mode 100644
+--- a/../Aplication/app/src/main/res/layout/activity_main.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,19 +0,0 @@
+-<?xml version="1.0" encoding="utf-8" ?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context=".MainActivity">
+-
+-    <Button
+-        android:id="@+id/button"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:text="Button"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:layout_constraintVertical_bias="0.5" />
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/main/res/drawable/ic_launcher_foreground.xml
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/res/drawable/ic_launcher_foreground.xml b/../ControleDeGastos/app/src/main/res/drawable/ic_launcher_foreground.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/res/drawable/ic_launcher_foreground.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,30 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:aapt="http://schemas.android.com/aapt"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
+-        <aapt:attr name="android:fillColor">
+-            <gradient
+-                android:endX="85.84757"
+-                android:endY="92.4963"
+-                android:startX="42.9492"
+-                android:startY="49.59793"
+-                android:type="linear">
+-                <item
+-                    android:color="#44000000"
+-                    android:offset="0.0" />
+-                <item
+-                    android:color="#00000000"
+-                    android:offset="1.0" />
+-            </gradient>
+-        </aapt:attr>
+-    </path>
+-    <path
+-        android:fillColor="#FFFFFF"
+-        android:fillType="nonZero"
+-        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
+-        android:strokeWidth="1"
+-        android:strokeColor="#00000000" />
+-</vector>
+\ No newline at end of file
+Index: ../ControleDeGastos/app/build.gradle.kts
+===================================================================
+diff --git a/../ControleDeGastos/app/build.gradle.kts b/../ControleDeGastos/app/build.gradle.kts
+deleted file mode 100644
+--- a/../ControleDeGastos/app/build.gradle.kts	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,69 +0,0 @@
+-plugins {
+-    id("com.android.application")
+-    id("org.jetbrains.kotlin.android")
+-}
+-
+-android {
+-    namespace = "com.fiap.controledegastos"
+-    compileSdk = 33
+-
+-    defaultConfig {
+-        applicationId = "com.fiap.controledegastos"
+-        minSdk = 24
+-        targetSdk = 33
+-        versionCode = 1
+-        versionName = "1.0"
+-
+-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+-        vectorDrawables {
+-            useSupportLibrary = true
+-        }
+-    }
+-
+-    buildTypes {
+-        release {
+-            isMinifyEnabled = false
+-            proguardFiles(
+-                getDefaultProguardFile("proguard-android-optimize.txt"),
+-                "proguard-rules.pro"
+-            )
+-        }
+-    }
+-    compileOptions {
+-        sourceCompatibility = JavaVersion.VERSION_1_8
+-        targetCompatibility = JavaVersion.VERSION_1_8
+-    }
+-    kotlinOptions {
+-        jvmTarget = "1.8"
+-    }
+-    buildFeatures {
+-        compose = true
+-    }
+-    composeOptions {
+-        kotlinCompilerExtensionVersion = "1.4.3"
+-    }
+-    packaging {
+-        resources {
+-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+-        }
+-    }
+-}
+-
+-dependencies {
+-
+-    implementation("androidx.core:core-ktx:1.9.0")
+-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+-    implementation("androidx.activity:activity-compose:1.8.2")
+-    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
+-    implementation("androidx.compose.ui:ui")
+-    implementation("androidx.compose.ui:ui-graphics")
+-    implementation("androidx.compose.ui:ui-tooling-preview")
+-    implementation("androidx.compose.material3:material3")
+-    testImplementation("junit:junit:4.13.2")
+-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+-    androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
+-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+-    debugImplementation("androidx.compose.ui:ui-tooling")
+-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+-}
+\ No newline at end of file
+Index: ../ControleDeGastos/.idea/kotlinc.xml
+===================================================================
+diff --git a/../ControleDeGastos/.idea/kotlinc.xml b/../ControleDeGastos/.idea/kotlinc.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/.idea/kotlinc.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="KotlinJpsPluginSettings">
+-    <option name="version" value="1.8.10" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/main/AndroidManifest.xml
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/AndroidManifest.xml b/../ControleDeGastos/app/src/main/AndroidManifest.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/AndroidManifest.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,28 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:tools="http://schemas.android.com/tools">
+-
+-    <application
+-        android:allowBackup="true"
+-        android:dataExtractionRules="@xml/data_extraction_rules"
+-        android:fullBackupContent="@xml/backup_rules"
+-        android:icon="@mipmap/ic_launcher"
+-        android:label="@string/app_name"
+-        android:roundIcon="@mipmap/ic_launcher_round"
+-        android:supportsRtl="true"
+-        android:theme="@style/Theme.ControleDeGastos"
+-        tools:targetApi="31">
+-        <activity
+-            android:name=".MainActivity"
+-            android:exported="true"
+-            android:label="@string/app_name"
+-            android:theme="@style/Theme.ControleDeGastos">
+-            <intent-filter>
+-                <action android:name="android.intent.action.MAIN" />
+-
+-                <category android:name="android.intent.category.LAUNCHER" />
+-            </intent-filter>
+-        </activity>
+-    </application>
+-
+-</manifest>
+\ No newline at end of file
+Index: ../Aplication/app/src/main/res/values/strings.xml
+===================================================================
+diff --git a/../Aplication/app/src/main/res/values/strings.xml b/../Aplication/app/src/main/res/values/strings.xml
+deleted file mode 100644
+--- a/../Aplication/app/src/main/res/values/strings.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,3 +0,0 @@
+-<resources>
+-    <string name="app_name">Aplication</string>
+-</resources>
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/test/java/com/fiap/controledegastos/ExampleUnitTest.kt
+===================================================================
+diff --git a/../ControleDeGastos/app/src/test/java/com/fiap/controledegastos/ExampleUnitTest.kt b/../ControleDeGastos/app/src/test/java/com/fiap/controledegastos/ExampleUnitTest.kt
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/test/java/com/fiap/controledegastos/ExampleUnitTest.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,17 +0,0 @@
+-package com.fiap.controledegastos
+-
+-import org.junit.Test
+-
+-import org.junit.Assert.*
+-
+-/**
+- * Example local unit test, which will execute on the development machine (host).
+- *
+- * See [testing documentation](http://d.android.com/tools/testing).
+- */
+-class ExampleUnitTest {
+-    @Test
+-    fun addition_isCorrect() {
+-        assertEquals(4, 2 + 2)
+-    }
+-}
+\ No newline at end of file
+Index: ../Aplication/app/src/main/res/drawable/ic_launcher_background.xml
+===================================================================
+diff --git a/../Aplication/app/src/main/res/drawable/ic_launcher_background.xml b/../Aplication/app/src/main/res/drawable/ic_launcher_background.xml
+deleted file mode 100644
+--- a/../Aplication/app/src/main/res/drawable/ic_launcher_background.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,170 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path
+-        android:fillColor="#3DDC84"
+-        android:pathData="M0,0h108v108h-108z" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M9,0L9,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,0L19,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,0L29,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,0L39,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,0L49,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,0L59,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,0L69,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,0L79,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M89,0L89,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M99,0L99,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,9L108,9"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,19L108,19"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,29L108,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,39L108,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,49L108,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,59L108,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,69L108,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,79L108,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,89L108,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,99L108,99"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,29L89,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,39L89,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,49L89,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,59L89,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,69L89,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,79L89,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,19L29,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,19L39,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,19L49,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,19L59,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,19L69,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,19L79,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-</vector>
+Index: ../ControleDeGastos/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml b/../ControleDeGastos/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml b/../ControleDeGastos/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: ../Aplication/app/src/main/res/drawable/ic_launcher_foreground.xml
+===================================================================
+diff --git a/../Aplication/app/src/main/res/drawable/ic_launcher_foreground.xml b/../Aplication/app/src/main/res/drawable/ic_launcher_foreground.xml
+deleted file mode 100644
+--- a/../Aplication/app/src/main/res/drawable/ic_launcher_foreground.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,30 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:aapt="http://schemas.android.com/aapt"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
+-        <aapt:attr name="android:fillColor">
+-            <gradient
+-                android:endX="85.84757"
+-                android:endY="92.4963"
+-                android:startX="42.9492"
+-                android:startY="49.59793"
+-                android:type="linear">
+-                <item
+-                    android:color="#44000000"
+-                    android:offset="0.0" />
+-                <item
+-                    android:color="#00000000"
+-                    android:offset="1.0" />
+-            </gradient>
+-        </aapt:attr>
+-    </path>
+-    <path
+-        android:fillColor="#FFFFFF"
+-        android:fillType="nonZero"
+-        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
+-        android:strokeWidth="1"
+-        android:strokeColor="#00000000" />
+-</vector>
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml b/../DrinkSmart/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: ../ControleDeGastos/settings.gradle.kts
+===================================================================
+diff --git a/../ControleDeGastos/settings.gradle.kts b/../ControleDeGastos/settings.gradle.kts
+deleted file mode 100644
+--- a/../ControleDeGastos/settings.gradle.kts	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,17 +0,0 @@
+-pluginManagement {
+-    repositories {
+-        google()
+-        mavenCentral()
+-        gradlePluginPortal()
+-    }
+-}
+-dependencyResolutionManagement {
+-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+-    repositories {
+-        google()
+-        mavenCentral()
+-    }
+-}
+-
+-rootProject.name = "ControleDeGastos"
+-include(":app")
+Index: ../ControleDeGastos/app/proguard-rules.pro
+===================================================================
+diff --git a/../ControleDeGastos/app/proguard-rules.pro b/../ControleDeGastos/app/proguard-rules.pro
+deleted file mode 100644
+--- a/../ControleDeGastos/app/proguard-rules.pro	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,21 +0,0 @@
+-# Add project specific ProGuard rules here.
+-# You can control the set of applied configuration files using the
+-# proguardFiles setting in build.gradle.
+-#
+-# For more details, see
+-#   http://developer.android.com/guide/developing/tools/proguard.html
+-
+-# If your project uses WebView with JS, uncomment the following
+-# and specify the fully qualified class name to the JavaScript interface
+-# class:
+-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+-#   public *;
+-#}
+-
+-# Uncomment this to preserve the line number information for
+-# debugging stack traces.
+-#-keepattributes SourceFile,LineNumberTable
+-
+-# If you keep the line number information, uncomment this to
+-# hide the original source file name.
+-#-renamesourcefileattribute SourceFile
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/res/xml/data_extraction_rules.xml
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/res/xml/data_extraction_rules.xml b/../DrinkSmart/app/src/main/res/xml/data_extraction_rules.xml
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/res/xml/data_extraction_rules.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,19 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?><!--
+-   Sample data extraction rules file; uncomment and customize as necessary.
+-   See https://developer.android.com/about/versions/12/backup-restore#xml-changes
+-   for details.
+--->
+-<data-extraction-rules>
+-    <cloud-backup>
+-        <!-- TODO: Use <include> and <exclude> to control what is backed up.
+-        <include .../>
+-        <exclude .../>
+-        -->
+-    </cloud-backup>
+-    <!--
+-    <device-transfer>
+-        <include .../>
+-        <exclude .../>
+-    </device-transfer>
+-    -->
+-</data-extraction-rules>
+\ No newline at end of file
+Index: ../DrinkSmart/gradle/wrapper/gradle-wrapper.properties
+===================================================================
+diff --git a/../DrinkSmart/gradle/wrapper/gradle-wrapper.properties b/../DrinkSmart/gradle/wrapper/gradle-wrapper.properties
+deleted file mode 100644
+--- a/../DrinkSmart/gradle/wrapper/gradle-wrapper.properties	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-#Fri Mar 15 14:08:37 BRT 2024
+-distributionBase=GRADLE_USER_HOME
+-distributionPath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-8.0-bin.zip
+-zipStoreBase=GRADLE_USER_HOME
+-zipStorePath=wrapper/dists
+Index: ../ControleDeGastos/app/src/main/res/values/colors.xml
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/res/values/colors.xml b/../ControleDeGastos/app/src/main/res/values/colors.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/res/values/colors.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,10 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-    <color name="purple_200">#FFBB86FC</color>
+-    <color name="purple_500">#FF6200EE</color>
+-    <color name="purple_700">#FF3700B3</color>
+-    <color name="teal_200">#FF03DAC5</color>
+-    <color name="teal_700">#FF018786</color>
+-    <color name="black">#FF000000</color>
+-    <color name="white">#FFFFFFFF</color>
+-</resources>
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/res/drawable/container_header.xml
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/res/drawable/container_header.xml b/../DrinkSmart/app/src/main/res/drawable/container_header.xml
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/res/drawable/container_header.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,13 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<shape xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:shape="rectangle">
+-
+-    <gradient android:type="linear"
+-        android:startColor="@android:color/holo_blue_bright"
+-        android:centerColor="#04C2DF"
+-        android:endColor="#2E2EA1"
+-        android:angle="90"/>
+-
+-    <corners android:bottomLeftRadius="100dp"/>
+-
+-</shape>
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/java/com/fiap/drinksmart/ui/theme/Theme.kt
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/java/com/fiap/drinksmart/ui/theme/Theme.kt b/../DrinkSmart/app/src/main/java/com/fiap/drinksmart/ui/theme/Theme.kt
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/java/com/fiap/drinksmart/ui/theme/Theme.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,70 +0,0 @@
+-package com.fiap.drinksmart.ui.theme
+-
+-import android.app.Activity
+-import android.os.Build
+-import androidx.compose.foundation.isSystemInDarkTheme
+-import androidx.compose.material3.MaterialTheme
+-import androidx.compose.material3.darkColorScheme
+-import androidx.compose.material3.dynamicDarkColorScheme
+-import androidx.compose.material3.dynamicLightColorScheme
+-import androidx.compose.material3.lightColorScheme
+-import androidx.compose.runtime.Composable
+-import androidx.compose.runtime.SideEffect
+-import androidx.compose.ui.graphics.toArgb
+-import androidx.compose.ui.platform.LocalContext
+-import androidx.compose.ui.platform.LocalView
+-import androidx.core.view.WindowCompat
+-
+-private val DarkColorScheme = darkColorScheme(
+-    primary = Purple80,
+-    secondary = PurpleGrey80,
+-    tertiary = Pink80
+-)
+-
+-private val LightColorScheme = lightColorScheme(
+-    primary = Purple40,
+-    secondary = PurpleGrey40,
+-    tertiary = Pink40
+-
+-    /* Other default colors to override
+-    background = Color(0xFFFFFBFE),
+-    surface = Color(0xFFFFFBFE),
+-    onPrimary = Color.White,
+-    onSecondary = Color.White,
+-    onTertiary = Color.White,
+-    onBackground = Color(0xFF1C1B1F),
+-    onSurface = Color(0xFF1C1B1F),
+-    */
+-)
+-
+-@Composable
+-fun DrinkSmartTheme(
+-    darkTheme: Boolean = isSystemInDarkTheme(),
+-    // Dynamic color is available on Android 12+
+-    dynamicColor: Boolean = true,
+-    content: @Composable () -> Unit
+-) {
+-    val colorScheme = when {
+-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+-            val context = LocalContext.current
+-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+-        }
+-
+-        darkTheme -> DarkColorScheme
+-        else -> LightColorScheme
+-    }
+-    val view = LocalView.current
+-    if (!view.isInEditMode) {
+-        SideEffect {
+-            val window = (view.context as Activity).window
+-            window.statusBarColor = colorScheme.primary.toArgb()
+-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
+-        }
+-    }
+-
+-    MaterialTheme(
+-        colorScheme = colorScheme,
+-        typography = Typography,
+-        content = content
+-    )
+-}
+\ No newline at end of file
+Index: ../DrinkSmart/.idea/misc.xml
+===================================================================
+diff --git a/../DrinkSmart/.idea/misc.xml b/../DrinkSmart/.idea/misc.xml
+deleted file mode 100644
+--- a/../DrinkSmart/.idea/misc.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,9 +0,0 @@
+-<project version="4">
+-  <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/build/classes" />
+-  </component>
+-  <component name="ProjectType">
+-    <option name="id" value="Android" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/ui/theme/Color.kt
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/ui/theme/Color.kt b/../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/ui/theme/Color.kt
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/ui/theme/Color.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,11 +0,0 @@
+-package com.fiap.controledegastos.ui.theme
+-
+-import androidx.compose.ui.graphics.Color
+-
+-val Purple80 = Color(0xFFD0BCFF)
+-val PurpleGrey80 = Color(0xFFCCC2DC)
+-val Pink80 = Color(0xFFEFB8C8)
+-
+-val Purple40 = Color(0xFF6650a4)
+-val PurpleGrey40 = Color(0xFF625b71)
+-val Pink40 = Color(0xFF7D5260)
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/main/res/drawable/ic_launcher_background.xml
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/res/drawable/ic_launcher_background.xml b/../ControleDeGastos/app/src/main/res/drawable/ic_launcher_background.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/res/drawable/ic_launcher_background.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,170 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path
+-        android:fillColor="#3DDC84"
+-        android:pathData="M0,0h108v108h-108z" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M9,0L9,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,0L19,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,0L29,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,0L39,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,0L49,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,0L59,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,0L69,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,0L79,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M89,0L89,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M99,0L99,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,9L108,9"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,19L108,19"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,29L108,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,39L108,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,49L108,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,59L108,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,69L108,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,79L108,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,89L108,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,99L108,99"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,29L89,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,39L89,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,49L89,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,59L89,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,69L89,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,79L89,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,19L29,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,19L39,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,19L49,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,19L59,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,19L69,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,19L79,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-</vector>
+Index: ../Aplication/app/src/main/AndroidManifest.xml
+===================================================================
+diff --git a/../Aplication/app/src/main/AndroidManifest.xml b/../Aplication/app/src/main/AndroidManifest.xml
+deleted file mode 100644
+--- a/../Aplication/app/src/main/AndroidManifest.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,16 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:tools="http://schemas.android.com/tools">
+-
+-    <application
+-        android:allowBackup="true"
+-        android:dataExtractionRules="@xml/data_extraction_rules"
+-        android:fullBackupContent="@xml/backup_rules"
+-        android:icon="@mipmap/ic_launcher"
+-        android:label="@string/app_name"
+-        android:roundIcon="@mipmap/ic_launcher_round"
+-        android:supportsRtl="true"
+-        android:theme="@style/Theme.Aplication"
+-        tools:targetApi="31" />
+-
+-</manifest>
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/res/layout/activity_main.xml
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/res/layout/activity_main.xml b/../DrinkSmart/app/src/main/res/layout/activity_main.xml
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/res/layout/activity_main.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,43 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8" ?>
+-
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    tools:ignore="MissingClass"
+-    android:layout_width="match_parent"
+-    android:layout_heigth="match_parent"
+-    tools:context=".MainActivity"
+-    android:layout_height="match_parent">
+-
+-
+-    <View
+-        android:id="@+id/container_header"
+-        android:layout_width="match_parent"
+-        android:layout_height="100dp"
+-        android:background="@drawable/container_header"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        tools:ignore="MissingConstraints" />
+-
+-    <ImageView
+-        android:layout_width="100dp"
+-        android:layout_height="80dp"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginTop="16dp"
+-        android:src="@drawable/bebaagua"
+-        app:layout_constraintStart_toStartOf="@+id/container_header"
+-        app:layout_constraintTop_toTopOf="@id/container_header" />
+-
+-    <ImageView
+-        android:layout_width="60dp"
+-        android:layout_height="40dp"
+-        android:src="@drawable/ic_refresh"
+-        android:layout_marginTop="30dp"
+-        android:layout_marginEnd="20dp"
+-        app:layout_constraintTop_toTopOf="@id/container_header"
+-        app:layout_constraintEnd_toEndOf="@id/container_header"
+-
+-     />
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+Index: ../Aplication/app/src/main/res/values/themes.xml
+===================================================================
+diff --git a/../Aplication/app/src/main/res/values/themes.xml b/../Aplication/app/src/main/res/values/themes.xml
+deleted file mode 100644
+--- a/../Aplication/app/src/main/res/values/themes.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,16 +0,0 @@
+-<resources xmlns:tools="http://schemas.android.com/tools">
+-    <!-- Base application theme. -->
+-    <style name="Theme.Aplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+-        <!-- Primary brand color. -->
+-        <item name="colorPrimary">@color/purple_500</item>
+-        <item name="colorPrimaryVariant">@color/purple_700</item>
+-        <item name="colorOnPrimary">@color/white</item>
+-        <!-- Secondary brand color. -->
+-        <item name="colorSecondary">@color/teal_200</item>
+-        <item name="colorSecondaryVariant">@color/teal_700</item>
+-        <item name="colorOnSecondary">@color/black</item>
+-        <!-- Status bar color. -->
+-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+-        <!-- Customize your theme here. -->
+-    </style>
+-</resources>
+\ No newline at end of file
+Index: ../Aplication/gradle/wrapper/gradle-wrapper.properties
+===================================================================
+diff --git a/../Aplication/gradle/wrapper/gradle-wrapper.properties b/../Aplication/gradle/wrapper/gradle-wrapper.properties
+deleted file mode 100644
+--- a/../Aplication/gradle/wrapper/gradle-wrapper.properties	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-#Wed Feb 28 20:34:30 BRT 2024
+-distributionBase=GRADLE_USER_HOME
+-distributionPath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-8.0-bin.zip
+-zipStoreBase=GRADLE_USER_HOME
+-zipStorePath=wrapper/dists
+Index: ../Aplication/.idea/gradle.xml
+===================================================================
+diff --git a/../Aplication/.idea/gradle.xml b/../Aplication/.idea/gradle.xml
+deleted file mode 100644
+--- a/../Aplication/.idea/gradle.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,20 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="GradleMigrationSettings" migrationVersion="1" />
+-  <component name="GradleSettings">
+-    <option name="linkedExternalProjectsSettings">
+-      <GradleProjectSettings>
+-        <option name="testRunner" value="GRADLE" />
+-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="gradleJvm" value="jbr-17" />
+-        <option name="modules">
+-          <set>
+-            <option value="$PROJECT_DIR$" />
+-            <option value="$PROJECT_DIR$/app" />
+-          </set>
+-        </option>
+-      </GradleProjectSettings>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/main/res/values/strings.xml
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/res/values/strings.xml b/../ControleDeGastos/app/src/main/res/values/strings.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/res/values/strings.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,3 +0,0 @@
+-<resources>
+-    <string name="app_name">ControleDeGastos</string>
+-</resources>
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/main/res/xml/data_extraction_rules.xml
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/res/xml/data_extraction_rules.xml b/../ControleDeGastos/app/src/main/res/xml/data_extraction_rules.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/res/xml/data_extraction_rules.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,19 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?><!--
+-   Sample data extraction rules file; uncomment and customize as necessary.
+-   See https://developer.android.com/about/versions/12/backup-restore#xml-changes
+-   for details.
+--->
+-<data-extraction-rules>
+-    <cloud-backup>
+-        <!-- TODO: Use <include> and <exclude> to control what is backed up.
+-        <include .../>
+-        <exclude .../>
+-        -->
+-    </cloud-backup>
+-    <!--
+-    <device-transfer>
+-        <include .../>
+-        <exclude .../>
+-    </device-transfer>
+-    -->
+-</data-extraction-rules>
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/res/drawable/ic_launcher_foreground.xml
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/res/drawable/ic_launcher_foreground.xml b/../DrinkSmart/app/src/main/res/drawable/ic_launcher_foreground.xml
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/res/drawable/ic_launcher_foreground.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,30 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:aapt="http://schemas.android.com/aapt"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
+-        <aapt:attr name="android:fillColor">
+-            <gradient
+-                android:endX="85.84757"
+-                android:endY="92.4963"
+-                android:startX="42.9492"
+-                android:startY="49.59793"
+-                android:type="linear">
+-                <item
+-                    android:color="#44000000"
+-                    android:offset="0.0" />
+-                <item
+-                    android:color="#00000000"
+-                    android:offset="1.0" />
+-            </gradient>
+-        </aapt:attr>
+-    </path>
+-    <path
+-        android:fillColor="#FFFFFF"
+-        android:fillType="nonZero"
+-        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
+-        android:strokeWidth="1"
+-        android:strokeColor="#00000000" />
+-</vector>
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/res/mipmap-anydpi/ic_launcher.xml
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/res/mipmap-anydpi/ic_launcher.xml b/../DrinkSmart/app/src/main/res/mipmap-anydpi/ic_launcher.xml
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/res/mipmap-anydpi/ic_launcher.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: ../Aplication/app/build.gradle.kts
+===================================================================
+diff --git a/../Aplication/app/build.gradle.kts b/../Aplication/app/build.gradle.kts
+deleted file mode 100644
+--- a/../Aplication/app/build.gradle.kts	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,46 +0,0 @@
+-plugins {
+-    id("com.android.application")
+-    id("org.jetbrains.kotlin.android")
+-}
+-
+-android {
+-    namespace = "com.fiap.aplication"
+-    compileSdk = 33
+-
+-    defaultConfig {
+-        applicationId = "com.fiap.aplication"
+-        minSdk = 30
+-        targetSdk = 33
+-        versionCode = 1
+-        versionName = "1.0"
+-
+-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+-    }
+-
+-    buildTypes {
+-        release {
+-            isMinifyEnabled = false
+-            proguardFiles(
+-                getDefaultProguardFile("proguard-android-optimize.txt"),
+-                "proguard-rules.pro"
+-            )
+-        }
+-    }
+-    compileOptions {
+-        sourceCompatibility = JavaVersion.VERSION_1_8
+-        targetCompatibility = JavaVersion.VERSION_1_8
+-    }
+-    kotlinOptions {
+-        jvmTarget = "1.8"
+-    }
+-}
+-
+-dependencies {
+-
+-    implementation("androidx.core:core-ktx:1.9.0")
+-    implementation("androidx.appcompat:appcompat:1.6.1")
+-    implementation("com.google.android.material:material:1.11.0")
+-    testImplementation("junit:junit:4.13.2")
+-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+-}
+\ No newline at end of file
+Index: ../Aplication/.idea/misc.xml
+===================================================================
+diff --git a/../Aplication/.idea/misc.xml b/../Aplication/.idea/misc.xml
+deleted file mode 100644
+--- a/../Aplication/.idea/misc.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,9 +0,0 @@
+-<project version="4">
+-  <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/build/classes" />
+-  </component>
+-  <component name="ProjectType">
+-    <option name="id" value="Android" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../DrinkSmart/.idea/.gitignore
+===================================================================
+diff --git a/../DrinkSmart/.idea/.gitignore b/../DrinkSmart/.idea/.gitignore
+deleted file mode 100644
+--- a/../DrinkSmart/.idea/.gitignore	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: ../DrinkSmart/.idea/kotlinc.xml
+===================================================================
+diff --git a/../DrinkSmart/.idea/kotlinc.xml b/../DrinkSmart/.idea/kotlinc.xml
+deleted file mode 100644
+--- a/../DrinkSmart/.idea/kotlinc.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="KotlinJpsPluginSettings">
+-    <option name="version" value="1.8.10" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/test/java/com/fiap/drinksmart/ExampleUnitTest.kt
+===================================================================
+diff --git a/../DrinkSmart/app/src/test/java/com/fiap/drinksmart/ExampleUnitTest.kt b/../DrinkSmart/app/src/test/java/com/fiap/drinksmart/ExampleUnitTest.kt
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/test/java/com/fiap/drinksmart/ExampleUnitTest.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,17 +0,0 @@
+-package com.fiap.drinksmart
+-
+-import org.junit.Test
+-
+-import org.junit.Assert.*
+-
+-/**
+- * Example local unit test, which will execute on the development machine (host).
+- *
+- * See [testing documentation](http://d.android.com/tools/testing).
+- */
+-class ExampleUnitTest {
+-    @Test
+-    fun addition_isCorrect() {
+-        assertEquals(4, 2 + 2)
+-    }
+-}
+\ No newline at end of file
+Index: ../Aplication/app/src/main/res/values/colors.xml
+===================================================================
+diff --git a/../Aplication/app/src/main/res/values/colors.xml b/../Aplication/app/src/main/res/values/colors.xml
+deleted file mode 100644
+--- a/../Aplication/app/src/main/res/values/colors.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,10 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-    <color name="purple_200">#FFBB86FC</color>
+-    <color name="purple_500">#FF6200EE</color>
+-    <color name="purple_700">#FF3700B3</color>
+-    <color name="teal_200">#FF03DAC5</color>
+-    <color name="teal_700">#FF018786</color>
+-    <color name="black">#FF000000</color>
+-    <color name="white">#FFFFFFFF</color>
+-</resources>
+\ No newline at end of file
+Index: ../ControleDeGastos/.idea/gradle.xml
+===================================================================
+diff --git a/../ControleDeGastos/.idea/gradle.xml b/../ControleDeGastos/.idea/gradle.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/.idea/gradle.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,19 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="GradleSettings">
+-    <option name="linkedExternalProjectsSettings">
+-      <GradleProjectSettings>
+-        <option name="testRunner" value="GRADLE" />
+-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="gradleJvm" value="jbr-17" />
+-        <option name="modules">
+-          <set>
+-            <option value="$PROJECT_DIR$" />
+-            <option value="$PROJECT_DIR$/app" />
+-          </set>
+-        </option>
+-      </GradleProjectSettings>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/ui/theme/Type.kt
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/ui/theme/Type.kt b/../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/ui/theme/Type.kt
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/ui/theme/Type.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,34 +0,0 @@
+-package com.fiap.controledegastos.ui.theme
+-
+-import androidx.compose.material3.Typography
+-import androidx.compose.ui.text.TextStyle
+-import androidx.compose.ui.text.font.FontFamily
+-import androidx.compose.ui.text.font.FontWeight
+-import androidx.compose.ui.unit.sp
+-
+-// Set of Material typography styles to start with
+-val Typography = Typography(
+-    bodyLarge = TextStyle(
+-        fontFamily = FontFamily.Default,
+-        fontWeight = FontWeight.Normal,
+-        fontSize = 16.sp,
+-        lineHeight = 24.sp,
+-        letterSpacing = 0.5.sp
+-    )
+-    /* Other default text styles to override
+-    titleLarge = TextStyle(
+-        fontFamily = FontFamily.Default,
+-        fontWeight = FontWeight.Normal,
+-        fontSize = 22.sp,
+-        lineHeight = 28.sp,
+-        letterSpacing = 0.sp
+-    ),
+-    labelSmall = TextStyle(
+-        fontFamily = FontFamily.Default,
+-        fontWeight = FontWeight.Medium,
+-        fontSize = 11.sp,
+-        lineHeight = 16.sp,
+-        letterSpacing = 0.5.sp
+-    )
+-    */
+-)
+\ No newline at end of file
+Index: ../Aplication/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml
+===================================================================
+diff --git a/../Aplication/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml b/../Aplication/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml
+deleted file mode 100644
+--- a/../Aplication/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: ../Aplication/.idea/kotlinc.xml
+===================================================================
+diff --git a/../Aplication/.idea/kotlinc.xml b/../Aplication/.idea/kotlinc.xml
+deleted file mode 100644
+--- a/../Aplication/.idea/kotlinc.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="KotlinJpsPluginSettings">
+-    <option name="version" value="1.9.0" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/java/com/fiap/drinksmart/ui/theme/Color.kt
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/java/com/fiap/drinksmart/ui/theme/Color.kt b/../DrinkSmart/app/src/main/java/com/fiap/drinksmart/ui/theme/Color.kt
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/java/com/fiap/drinksmart/ui/theme/Color.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,11 +0,0 @@
+-package com.fiap.drinksmart.ui.theme
+-
+-import androidx.compose.ui.graphics.Color
+-
+-val Purple80 = Color(0xFFD0BCFF)
+-val PurpleGrey80 = Color(0xFFCCC2DC)
+-val Pink80 = Color(0xFFEFB8C8)
+-
+-val Purple40 = Color(0xFF6650a4)
+-val PurpleGrey40 = Color(0xFF625b71)
+-val Pink40 = Color(0xFF7D5260)
+\ No newline at end of file
+Index: ../ControleDeGastos/.idea/inspectionProfiles/Project_Default.xml
+===================================================================
+diff --git a/../ControleDeGastos/.idea/inspectionProfiles/Project_Default.xml b/../ControleDeGastos/.idea/inspectionProfiles/Project_Default.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/.idea/inspectionProfiles/Project_Default.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,41 +0,0 @@
+-<component name="InspectionProjectProfileManager">
+-  <profile version="1.0">
+-    <option name="myName" value="Project Default" />
+-    <inspection_tool class="PreviewAnnotationInFunctionWithParameters" enabled="true" level="ERROR" enabled_by_default="true">
+-      <option name="composableFile" value="true" />
+-      <option name="previewFile" value="true" />
+-    </inspection_tool>
+-    <inspection_tool class="PreviewApiLevelMustBeValid" enabled="true" level="ERROR" enabled_by_default="true">
+-      <option name="composableFile" value="true" />
+-      <option name="previewFile" value="true" />
+-    </inspection_tool>
+-    <inspection_tool class="PreviewDimensionRespectsLimit" enabled="true" level="WARNING" enabled_by_default="true">
+-      <option name="composableFile" value="true" />
+-      <option name="previewFile" value="true" />
+-    </inspection_tool>
+-    <inspection_tool class="PreviewFontScaleMustBeGreaterThanZero" enabled="true" level="ERROR" enabled_by_default="true">
+-      <option name="composableFile" value="true" />
+-      <option name="previewFile" value="true" />
+-    </inspection_tool>
+-    <inspection_tool class="PreviewMultipleParameterProviders" enabled="true" level="ERROR" enabled_by_default="true">
+-      <option name="composableFile" value="true" />
+-      <option name="previewFile" value="true" />
+-    </inspection_tool>
+-    <inspection_tool class="PreviewMustBeTopLevelFunction" enabled="true" level="ERROR" enabled_by_default="true">
+-      <option name="composableFile" value="true" />
+-      <option name="previewFile" value="true" />
+-    </inspection_tool>
+-    <inspection_tool class="PreviewNeedsComposableAnnotation" enabled="true" level="ERROR" enabled_by_default="true">
+-      <option name="composableFile" value="true" />
+-      <option name="previewFile" value="true" />
+-    </inspection_tool>
+-    <inspection_tool class="PreviewNotSupportedInUnitTestFiles" enabled="true" level="ERROR" enabled_by_default="true">
+-      <option name="composableFile" value="true" />
+-      <option name="previewFile" value="true" />
+-    </inspection_tool>
+-    <inspection_tool class="PreviewPickerAnnotation" enabled="true" level="ERROR" enabled_by_default="true">
+-      <option name="composableFile" value="true" />
+-      <option name="previewFile" value="true" />
+-    </inspection_tool>
+-  </profile>
+-</component>
+\ No newline at end of file
+Index: ../Aplication/app/.gitignore
+===================================================================
+diff --git a/../Aplication/app/.gitignore b/../Aplication/app/.gitignore
+deleted file mode 100644
+--- a/../Aplication/app/.gitignore	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,1 +0,0 @@
+-/build
+\ No newline at end of file
+Index: ../Aplication/app/src/main/res/xml/backup_rules.xml
+===================================================================
+diff --git a/../Aplication/app/src/main/res/xml/backup_rules.xml b/../Aplication/app/src/main/res/xml/backup_rules.xml
+deleted file mode 100644
+--- a/../Aplication/app/src/main/res/xml/backup_rules.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,13 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?><!--
+-   Sample backup rules file; uncomment and customize as necessary.
+-   See https://developer.android.com/guide/topics/data/autobackup
+-   for details.
+-   Note: This file is ignored for devices older that API 31
+-   See https://developer.android.com/about/versions/12/backup-restore
+--->
+-<full-backup-content>
+-    <!--
+-   <include domain="sharedpref" path="."/>
+-   <exclude domain="sharedpref" path="device.xml"/>
+--->
+-</full-backup-content>
+\ No newline at end of file
+Index: ../Aplication/app/src/main/res/mipmap-anydpi/ic_launcher.xml
+===================================================================
+diff --git a/../Aplication/app/src/main/res/mipmap-anydpi/ic_launcher.xml b/../Aplication/app/src/main/res/mipmap-anydpi/ic_launcher.xml
+deleted file mode 100644
+--- a/../Aplication/app/src/main/res/mipmap-anydpi/ic_launcher.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: ../ControleDeGastos/.idea/compiler.xml
+===================================================================
+diff --git a/../ControleDeGastos/.idea/compiler.xml b/../ControleDeGastos/.idea/compiler.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/.idea/compiler.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="CompilerConfiguration">
+-    <bytecodeTargetLevel target="17" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../DrinkSmart/.idea/gradle.xml
+===================================================================
+diff --git a/../DrinkSmart/.idea/gradle.xml b/../DrinkSmart/.idea/gradle.xml
+deleted file mode 100644
+--- a/../DrinkSmart/.idea/gradle.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,20 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="GradleMigrationSettings" migrationVersion="1" />
+-  <component name="GradleSettings">
+-    <option name="linkedExternalProjectsSettings">
+-      <GradleProjectSettings>
+-        <option name="testRunner" value="GRADLE" />
+-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="gradleJvm" value="jbr-17" />
+-        <option name="modules">
+-          <set>
+-            <option value="$PROJECT_DIR$" />
+-            <option value="$PROJECT_DIR$/app" />
+-          </set>
+-        </option>
+-      </GradleProjectSettings>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/res/xml/backup_rules.xml
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/res/xml/backup_rules.xml b/../DrinkSmart/app/src/main/res/xml/backup_rules.xml
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/res/xml/backup_rules.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,13 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?><!--
+-   Sample backup rules file; uncomment and customize as necessary.
+-   See https://developer.android.com/guide/topics/data/autobackup
+-   for details.
+-   Note: This file is ignored for devices older that API 31
+-   See https://developer.android.com/about/versions/12/backup-restore
+--->
+-<full-backup-content>
+-    <!--
+-   <include domain="sharedpref" path="."/>
+-   <exclude domain="sharedpref" path="device.xml"/>
+--->
+-</full-backup-content>
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/res/drawable/ic_launcher_background.xml
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/res/drawable/ic_launcher_background.xml b/../DrinkSmart/app/src/main/res/drawable/ic_launcher_background.xml
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/res/drawable/ic_launcher_background.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,170 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path
+-        android:fillColor="#3DDC84"
+-        android:pathData="M0,0h108v108h-108z" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M9,0L9,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,0L19,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,0L29,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,0L39,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,0L49,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,0L59,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,0L69,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,0L79,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M89,0L89,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M99,0L99,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,9L108,9"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,19L108,19"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,29L108,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,39L108,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,49L108,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,59L108,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,69L108,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,79L108,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,89L108,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,99L108,99"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,29L89,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,39L89,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,49L89,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,59L89,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,69L89,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,79L89,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,19L29,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,19L39,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,19L49,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,19L59,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,19L69,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,19L79,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-</vector>
+Index: ../Aplication/app/src/androidTest/java/com/fiap/aplication/ExampleInstrumentedTest.kt
+===================================================================
+diff --git a/../Aplication/app/src/androidTest/java/com/fiap/aplication/ExampleInstrumentedTest.kt b/../Aplication/app/src/androidTest/java/com/fiap/aplication/ExampleInstrumentedTest.kt
+deleted file mode 100644
+--- a/../Aplication/app/src/androidTest/java/com/fiap/aplication/ExampleInstrumentedTest.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,24 +0,0 @@
+-package com.fiap.aplication
+-
+-import androidx.test.platform.app.InstrumentationRegistry
+-import androidx.test.ext.junit.runners.AndroidJUnit4
+-
+-import org.junit.Test
+-import org.junit.runner.RunWith
+-
+-import org.junit.Assert.*
+-
+-/**
+- * Instrumented test, which will execute on an Android device.
+- *
+- * See [testing documentation](http://d.android.com/tools/testing).
+- */
+-@RunWith(AndroidJUnit4::class)
+-class ExampleInstrumentedTest {
+-    @Test
+-    fun useAppContext() {
+-        // Context of the app under test.
+-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+-        assertEquals("com.fiap.aplication", appContext.packageName)
+-    }
+-}
+\ No newline at end of file
+Index: ../Aplication/gradle.properties
+===================================================================
+diff --git a/../Aplication/gradle.properties b/../Aplication/gradle.properties
+deleted file mode 100644
+--- a/../Aplication/gradle.properties	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,23 +0,0 @@
+-# Project-wide Gradle settings.
+-# IDE (e.g. Android Studio) users:
+-# Gradle settings configured through the IDE *will override*
+-# any settings specified in this file.
+-# For more details on how to configure your build environment visit
+-# http://www.gradle.org/docs/current/userguide/build_environment.html
+-# Specifies the JVM arguments used for the daemon process.
+-# The setting is particularly useful for tweaking memory settings.
+-org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
+-# When configured, Gradle will run in incubating parallel mode.
+-# This option should only be used with decoupled projects. More details, visit
+-# http://www.gradle.org/docs/current/userguide/multi_project_builds.html#sec:decoupled_projects
+-# org.gradle.parallel=true
+-# AndroidX package structure to make it clearer which packages are bundled with the
+-# Android operating system, and which are packaged with your app's APK
+-# https://developer.android.com/topic/libraries/support-library/androidx-rn
+-android.useAndroidX=true
+-# Kotlin code style for this project: "official" or "obsolete":
+-kotlin.code.style=official
+-# Enables namespacing of each library's R class so that its R class includes only the
+-# resources declared in the library itself and none from the library's dependencies,
+-# thereby reducing the size of the R class for that library
+-android.nonTransitiveRClass=true
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/main/res/values/themes.xml
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/res/values/themes.xml b/../ControleDeGastos/app/src/main/res/values/themes.xml
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/res/values/themes.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,5 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-
+-    <style name="Theme.ControleDeGastos" parent="android:Theme.Material.Light.NoActionBar" />
+-</resources>
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/res/values/colors.xml
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/res/values/colors.xml b/../DrinkSmart/app/src/main/res/values/colors.xml
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/res/values/colors.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,11 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-    <color name="purple_200">#FFBB86FC</color>
+-    <color name="purple_500">#FF6200EE</color>
+-    <color name="purple_700">#FF3700B3</color>
+-    <color name="teal_200">#FF03DAC5</color>
+-    <color name="teal_700">#FF018786</color>
+-    <color name="black">#FF000000</color>
+-    <color name="white">#FFFFFFFF</color>
+-    <color name="blue">#0000FF</color>
+-</resources>
+\ No newline at end of file
+Index: ../Aplication/app/src/main/res/values-night/themes.xml
+===================================================================
+diff --git a/../Aplication/app/src/main/res/values-night/themes.xml b/../Aplication/app/src/main/res/values-night/themes.xml
+deleted file mode 100644
+--- a/../Aplication/app/src/main/res/values-night/themes.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,16 +0,0 @@
+-<resources xmlns:tools="http://schemas.android.com/tools">
+-    <!-- Base application theme. -->
+-    <style name="Theme.Aplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+-        <!-- Primary brand color. -->
+-        <item name="colorPrimary">@color/purple_200</item>
+-        <item name="colorPrimaryVariant">@color/purple_700</item>
+-        <item name="colorOnPrimary">@color/black</item>
+-        <!-- Secondary brand color. -->
+-        <item name="colorSecondary">@color/teal_200</item>
+-        <item name="colorSecondaryVariant">@color/teal_200</item>
+-        <item name="colorOnSecondary">@color/black</item>
+-        <!-- Status bar color. -->
+-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+-        <!-- Customize your theme here. -->
+-    </style>
+-</resources>
+\ No newline at end of file
+Index: ../DrinkSmart/app/build.gradle.kts
+===================================================================
+diff --git a/../DrinkSmart/app/build.gradle.kts b/../DrinkSmart/app/build.gradle.kts
+deleted file mode 100644
+--- a/../DrinkSmart/app/build.gradle.kts	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,70 +0,0 @@
+-plugins {
+-    id("com.android.application")
+-    id("org.jetbrains.kotlin.android")
+-}
+-
+-android {
+-    namespace = "com.fiap.drinksmart"
+-    compileSdk = 34
+-
+-    defaultConfig {
+-        applicationId = "com.fiap.drinksmart"
+-        minSdk = 34
+-        targetSdk = 34
+-        versionCode = 1
+-        versionName = "1.0"
+-
+-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+-        vectorDrawables {
+-            useSupportLibrary = true
+-        }
+-    }
+-
+-    buildTypes {
+-        release {
+-            isMinifyEnabled = false
+-            proguardFiles(
+-                getDefaultProguardFile("proguard-android-optimize.txt"),
+-                "proguard-rules.pro"
+-            )
+-        }
+-    }
+-    compileOptions {
+-        sourceCompatibility = JavaVersion.VERSION_1_8
+-        targetCompatibility = JavaVersion.VERSION_1_8
+-    }
+-    kotlinOptions {
+-        jvmTarget = "1.8"
+-    }
+-    buildFeatures {
+-        compose = true
+-    }
+-    composeOptions {
+-        kotlinCompilerExtensionVersion = "1.4.3"
+-    }
+-    packaging {
+-        resources {
+-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+-        }
+-    }
+-}
+-
+-dependencies {
+-
+-    implementation("androidx.core:core-ktx:1.9.0")
+-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+-    implementation("androidx.activity:activity-compose:1.8.2")
+-    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
+-    implementation("androidx.compose.ui:ui")
+-    implementation("androidx.compose.ui:ui-graphics")
+-    implementation("androidx.compose.ui:ui-tooling-preview")
+-    implementation("androidx.compose.material3:material3")
+-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+-    testImplementation("junit:junit:4.13.2")
+-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+-    androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
+-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+-    debugImplementation("androidx.compose.ui:ui-tooling")
+-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+-}
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/main/res/values/strings.xml
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/res/values/strings.xml b/../DrinkSmart/app/src/main/res/values/strings.xml
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/res/values/strings.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,3 +0,0 @@
+-<resources>
+-    <string name="app_name">DrinkSmart</string>
+-</resources>
+\ No newline at end of file
+Index: ../Aplication/app/src/test/java/com/fiap/aplication/ExampleUnitTest.kt
+===================================================================
+diff --git a/../Aplication/app/src/test/java/com/fiap/aplication/ExampleUnitTest.kt b/../Aplication/app/src/test/java/com/fiap/aplication/ExampleUnitTest.kt
+deleted file mode 100644
+--- a/../Aplication/app/src/test/java/com/fiap/aplication/ExampleUnitTest.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,17 +0,0 @@
+-package com.fiap.aplication
+-
+-import org.junit.Test
+-
+-import org.junit.Assert.*
+-
+-/**
+- * Example local unit test, which will execute on the development machine (host).
+- *
+- * See [testing documentation](http://d.android.com/tools/testing).
+- */
+-class ExampleUnitTest {
+-    @Test
+-    fun addition_isCorrect() {
+-        assertEquals(4, 2 + 2)
+-    }
+-}
+\ No newline at end of file
+Index: ../ControleDeGastos/gradle.properties
+===================================================================
+diff --git a/../ControleDeGastos/gradle.properties b/../ControleDeGastos/gradle.properties
+deleted file mode 100644
+--- a/../ControleDeGastos/gradle.properties	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,23 +0,0 @@
+-# Project-wide Gradle settings.
+-# IDE (e.g. Android Studio) users:
+-# Gradle settings configured through the IDE *will override*
+-# any settings specified in this file.
+-# For more details on how to configure your build environment visit
+-# http://www.gradle.org/docs/current/userguide/build_environment.html
+-# Specifies the JVM arguments used for the daemon process.
+-# The setting is particularly useful for tweaking memory settings.
+-org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
+-# When configured, Gradle will run in incubating parallel mode.
+-# This option should only be used with decoupled projects. More details, visit
+-# http://www.gradle.org/docs/current/userguide/multi_project_builds.html#sec:decoupled_projects
+-# org.gradle.parallel=true
+-# AndroidX package structure to make it clearer which packages are bundled with the
+-# Android operating system, and which are packaged with your app's APK
+-# https://developer.android.com/topic/libraries/support-library/androidx-rn
+-android.useAndroidX=true
+-# Kotlin code style for this project: "official" or "obsolete":
+-kotlin.code.style=official
+-# Enables namespacing of each library's R class so that its R class includes only the
+-# resources declared in the library itself and none from the library's dependencies,
+-# thereby reducing the size of the R class for that library
+-android.nonTransitiveRClass=true
+\ No newline at end of file
+Index: ../DrinkSmart/app/src/androidTest/java/com/fiap/drinksmart/ExampleInstrumentedTest.kt
+===================================================================
+diff --git a/../DrinkSmart/app/src/androidTest/java/com/fiap/drinksmart/ExampleInstrumentedTest.kt b/../DrinkSmart/app/src/androidTest/java/com/fiap/drinksmart/ExampleInstrumentedTest.kt
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/androidTest/java/com/fiap/drinksmart/ExampleInstrumentedTest.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,24 +0,0 @@
+-package com.fiap.drinksmart
+-
+-import androidx.test.platform.app.InstrumentationRegistry
+-import androidx.test.ext.junit.runners.AndroidJUnit4
+-
+-import org.junit.Test
+-import org.junit.runner.RunWith
+-
+-import org.junit.Assert.*
+-
+-/**
+- * Instrumented test, which will execute on an Android device.
+- *
+- * See [testing documentation](http://d.android.com/tools/testing).
+- */
+-@RunWith(AndroidJUnit4::class)
+-class ExampleInstrumentedTest {
+-    @Test
+-    fun useAppContext() {
+-        // Context of the app under test.
+-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+-        assertEquals("com.fiap.drinksmart", appContext.packageName)
+-    }
+-}
+\ No newline at end of file
+Index: ../DrinkSmart/build.gradle.kts
+===================================================================
+diff --git a/../DrinkSmart/build.gradle.kts b/../DrinkSmart/build.gradle.kts
+deleted file mode 100644
+--- a/../DrinkSmart/build.gradle.kts	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,5 +0,0 @@
+-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+-plugins {
+-    id("com.android.application") version "8.1.1" apply false
+-    id("org.jetbrains.kotlin.android") version "1.8.10" apply false
+-}
+\ No newline at end of file
+Index: ../ControleDeGastos/gradle/wrapper/gradle-wrapper.properties
+===================================================================
+diff --git a/../ControleDeGastos/gradle/wrapper/gradle-wrapper.properties b/../ControleDeGastos/gradle/wrapper/gradle-wrapper.properties
+deleted file mode 100644
+--- a/../ControleDeGastos/gradle/wrapper/gradle-wrapper.properties	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,6 +0,0 @@
+-#Wed Mar 13 18:43:17 BRT 2024
+-distributionBase=GRADLE_USER_HOME
+-distributionPath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-8.0-bin.zip
+-zipStoreBase=GRADLE_USER_HOME
+-zipStorePath=wrapper/dists
+Index: ../DrinkSmart/app/src/main/AndroidManifest.xml
+===================================================================
+diff --git a/../DrinkSmart/app/src/main/AndroidManifest.xml b/../DrinkSmart/app/src/main/AndroidManifest.xml
+deleted file mode 100644
+--- a/../DrinkSmart/app/src/main/AndroidManifest.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,28 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:tools="http://schemas.android.com/tools">
+-
+-    <application
+-        android:allowBackup="true"
+-        android:dataExtractionRules="@xml/data_extraction_rules"
+-        android:fullBackupContent="@xml/backup_rules"
+-        android:icon="@mipmap/ic_launcher"
+-        android:label="@string/app_name"
+-        android:roundIcon="@mipmap/ic_launcher_round"
+-        android:supportsRtl="true"
+-        android:theme="@style/Theme.DrinkSmart"
+-        tools:targetApi="31">
+-        <activity
+-            android:name=".MainActivity"
+-            android:exported="true"
+-            android:label="@string/app_name"
+-            android:theme="@style/Theme.DrinkSmart">
+-            <intent-filter>
+-                <action android:name="android.intent.action.MAIN" />
+-
+-                <category android:name="android.intent.category.LAUNCHER" />
+-            </intent-filter>
+-        </activity>
+-    </application>
+-
+-</manifest>
+\ No newline at end of file
+Index: ../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/MainActivity.kt
+===================================================================
+diff --git a/../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/MainActivity.kt b/../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/MainActivity.kt
+deleted file mode 100644
+--- a/../ControleDeGastos/app/src/main/java/com/fiap/controledegastos/MainActivity.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ /dev/null	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
+@@ -1,19 +0,0 @@
+-package com.fiap.controledegastos
+-
+-import android.os.Bundle
+-import androidx.activity.ComponentActivity
+-import androidx.activity.compose.setContent
+-import androidx.compose.foundation.layout.fillMaxSize
+-import androidx.compose.material3.MaterialTheme
+-import androidx.compose.material3.Surface
+-import androidx.compose.material3.Text
+-import androidx.compose.runtime.Composable
+-import androidx.compose.ui.Modifier
+-import androidx.compose.ui.tooling.preview.Preview
+-import com.fiap.controledegastos.ui.theme.ControleDeGastosTheme
+-
+-class MainActivity : ComponentActivity() {
+-    override fun onCreate(savedInstanceState: Bundle?) {
+-        super.onCreate(savedInstanceState)
+-    }
+-}
+\ No newline at end of file
+Index: ../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuContato.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuContato.kt b/../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuContato.kt
+new file mode 100644
+--- /dev/null	(date 1712881852244)
++++ b/../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuContato.kt	(date 1712881852244)
+@@ -0,0 +1,21 @@
++package com.fiap.appinstitucional
++
++import android.annotation.SuppressLint
++import android.os.Bundle
++import android.widget.Button
++import androidx.activity.ComponentActivity
++
++class MenuContato: ComponentActivity() {
++
++    @SuppressLint("MissingInflatedId")
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        setContentView(R.layout.menu_contato)
++
++        val buttonVoltar = findViewById<Button>(R.id.button4)
++
++        buttonVoltar.setOnClickListener {
++            finish()
++        }
++    }
++}
+\ No newline at end of file
+Index: ../Desafio/app/src/main/res/layout/dialog_add_task.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Desafio/app/src/main/res/layout/dialog_add_task.xml b/../Desafio/app/src/main/res/layout/dialog_add_task.xml
+new file mode 100644
+--- /dev/null	(date 1712250108900)
++++ b/../Desafio/app/src/main/res/layout/dialog_add_task.xml	(date 1712250108900)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++    <EditText
++        android:id="@+id/editTextTaskName"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:hint="Nova Tarefa"/>
++
++</LinearLayout>
+\ No newline at end of file
+Index: gradle/wrapper/gradle-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Tue Apr 02 20:36:31 BRT 2024\r\ndistributionBase=GRADLE_USER_HOME\r\ndistributionPath=wrapper/dists\r\ndistributionUrl=https\\://services.gradle.org/distributions/gradle-8.0-bin.zip\r\nzipStoreBase=GRADLE_USER_HOME\r\nzipStorePath=wrapper/dists\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/gradle/wrapper/gradle-wrapper.properties b/gradle/wrapper/gradle-wrapper.properties
+--- a/gradle/wrapper/gradle-wrapper.properties	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/gradle/wrapper/gradle-wrapper.properties	(date 1713278012404)
+@@ -1,6 +1,6 @@
+ #Tue Apr 02 20:36:31 BRT 2024
+ distributionBase=GRADLE_USER_HOME
+ distributionPath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-8.0-bin.zip
++distributionUrl=https\://services.gradle.org/distributions/gradle-8.4-bin.zip
+ zipStoreBase=GRADLE_USER_HOME
+ zipStorePath=wrapper/dists
+Index: app/src/main/res/layout/ciracao_conta.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/ciracao_conta.xml b/app/src/main/res/layout/criacao_conta.xml
+rename from app/src/main/res/layout/ciracao_conta.xml
+rename to app/src/main/res/layout/criacao_conta.xml
+--- a/app/src/main/res/layout/ciracao_conta.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/app/src/main/res/layout/criacao_conta.xml	(date 1713229933028)
+@@ -51,7 +51,6 @@
+         android:layout_below="@+id/editTextSenha"
+         android:layout_alignParentStart="true"
+         android:layout_alignParentEnd="true"
+-        android:layout_centerVertical="true"
+         android:layout_marginStart="16dp"
+         android:layout_marginTop="34dp"
+         android:layout_marginEnd="16dp"
+Index: ../ListView/.idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"GRADLE\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"jbr-17\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../ListView/.idea/gradle.xml b/../ListView/.idea/gradle.xml
+--- a/../ListView/.idea/gradle.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/../ListView/.idea/gradle.xml	(date 1713278880822)
+@@ -1,18 +1,18 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+-        <option name="testRunner" value="GRADLE" />
+-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="gradleJvm" value="jbr-17" />
++        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+         <option name="modules">
+           <set>
+             <option value="$PROJECT_DIR$" />
+             <option value="$PROJECT_DIR$/app" />
+           </set>
+         </option>
++        <option name="resolveExternalAnnotations" value="false" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: ../ListView/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"jbr-17\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../ListView/.idea/misc.xml b/../ListView/.idea/misc.xml
+--- a/../ListView/.idea/misc.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/../ListView/.idea/misc.xml	(date 1713278829294)
+@@ -1,4 +1,3 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+Index: ../AppComanda/.idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"GRADLE\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"jbr-17\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../AppComanda/.idea/gradle.xml b/../AppComanda/.idea/gradle.xml
+--- a/../AppComanda/.idea/gradle.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/../AppComanda/.idea/gradle.xml	(date 1713278825785)
+@@ -4,16 +4,15 @@
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+-        <option name="testRunner" value="GRADLE" />
+-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="gradleJvm" value="jbr-17" />
++        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+         <option name="modules">
+           <set>
+             <option value="$PROJECT_DIR$" />
+             <option value="$PROJECT_DIR$/app" />
+           </set>
+         </option>
++        <option name="resolveExternalAnnotations" value="false" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: ../Navegacao/.idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"GRADLE\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"jbr-17\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Navegacao/.idea/gradle.xml b/../Navegacao/.idea/gradle.xml
+--- a/../Navegacao/.idea/gradle.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/../Navegacao/.idea/gradle.xml	(date 1713278318337)
+@@ -4,16 +4,15 @@
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+-        <option name="testRunner" value="GRADLE" />
+-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="gradleJvm" value="jbr-17" />
++        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+         <option name="modules">
+           <set>
+             <option value="$PROJECT_DIR$" />
+             <option value="$PROJECT_DIR$/app" />
+           </set>
+         </option>
++        <option name="resolveExternalAnnotations" value="false" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: ../Desafio/app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Desafio/app/src/main/res/layout/activity_main.xml b/../Desafio/app/src/main/res/layout/activity_main.xml
+new file mode 100644
+--- /dev/null	(date 1712250108866)
++++ b/../Desafio/app/src/main/res/layout/activity_main.xml	(date 1712250108866)
+@@ -0,0 +1,26 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".MainActivity">
++
++    <ListView
++        android:id="@+id/listView"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"/>
++
++    <com.google.android.material.floatingactionbutton.FloatingActionButton
++        android:id="@+id/fabAddTask"
++        android:layout_width="65dp"
++        android:layout_height="52dp"
++        android:layout_marginStart="330dp"
++        android:layout_marginTop="640dp"
++        android:layout_marginEnd="16dp"
++        android:layout_marginBottom="16dp"
++        android:clickable="true"
++        android:focusable="true"
++        android:src="@android:drawable/ic_input_add" />
++
++
++</RelativeLayout>
+\ No newline at end of file
+Index: ../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuCliente.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuCliente.kt b/../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuCliente.kt
+new file mode 100644
+--- /dev/null	(date 1712881852204)
++++ b/../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuCliente.kt	(date 1712881852204)
+@@ -0,0 +1,24 @@
++package com.fiap.appinstitucional
++
++import android.annotation.SuppressLint
++import android.os.Bundle
++import android.widget.Button
++import androidx.activity.ComponentActivity
++
++class MenuCliente : ComponentActivity() {
++    @SuppressLint("MissingInflatedId")
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        setContentView(R.layout.menu_cliente)
++
++        val buttonVoltar = findViewById<Button>(R.id.button)
++
++        buttonVoltar.setOnClickListener {
++            finish()
++        }
++
++
++
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">EmotionDecoder</string>\r\n    <string name=\"comecar\">Começar</string>\r\n    <string name=\"titulo\">EmotionDecoder</string>\r\n    <string name=\"subtitulo\">Decodifique suas emoções e desbloqueie seu potencial</string>\r\n    <string name=\"nome\">Nome</string>\r\n    <string name=\"e_mail\">E-mail</string>\r\n    <string name=\"senha\">Senha</string>\r\n    <string name=\"confirmar_senha\">Confirmar Senha</string>\r\n    <string name=\"criar_conta\">Criar Conta</string>\r\n    <string name=\"como_voc_est_se_sentindo_agora\">Como você está se sentindo agora?</string>\r\n    <string name=\"coment_rios_adicionais_opcional\">Comentários adicionais (opcional)</string>\r\n    <string name=\"sugest_es\">Sugestões:</string>\r\n    <string name=\"digite_seu_nome\">Digite seu nome</string>\r\n    <string name=\"digite_seu_e_mail\">Digite seu e-mail</string>\r\n    <string name=\"digite_sua_senha\">Digite sua senha</string>\r\n    <string name=\"digite_sua_senha_novamente\">Digite sua senha novamente</string>\r\n    <string name=\"entrar\">Entrar</string>\r\n    <string name=\"esqueci_minha_senha\">Esqueci minha senha</string>\r\n    <string name=\"feedback\">Feedback</string>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/app/src/main/res/values/strings.xml	(date 1713229762555)
+@@ -18,4 +18,6 @@
+     <string name="entrar">Entrar</string>
+     <string name="esqueci_minha_senha">Esqueci minha senha</string>
+     <string name="feedback">Feedback</string>
++    <string name="enviar">Enviar</string>
++    <string name="finalizar">Finalizar</string>
+ </resources>
+\ No newline at end of file
+Index: .idea/fastRequest/fastRequestCurrentProjectLocalConfig.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/fastRequest/fastRequestCurrentProjectLocalConfig.xml b/.idea/fastRequest/fastRequestCurrentProjectLocalConfig.xml
+new file mode 100644
+--- /dev/null	(date 1713275254810)
++++ b/.idea/fastRequest/fastRequestCurrentProjectLocalConfig.xml	(date 1713275254810)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="fastRequestCurrentProjectLocalConfig">
++    <option name="initFlag" value="1" />
++  </component>
++</project>
+\ No newline at end of file
+Index: ../AppComanda/app/src/main/java/com/fiap/appcomanda/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.fiap.appcomanda\r\n\r\nimport android.content.Intent\r\nimport android.os.Bundle\r\nimport android.widget.Button\r\nimport android.widget.EditText\r\nimport androidx.activity.ComponentActivity\r\nimport com.fiap.appcomanda.databinding.ActivityMainBinding\r\n\r\n\r\nclass MainActivity : ComponentActivity() {\r\n\r\n    private lateinit var binding: ActivityMainBinding\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../AppComanda/app/src/main/java/com/fiap/appcomanda/MainActivity.kt b/../AppComanda/app/src/main/java/com/fiap/appcomanda/MainActivity.kt
+--- a/../AppComanda/app/src/main/java/com/fiap/appcomanda/MainActivity.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/../AppComanda/app/src/main/java/com/fiap/appcomanda/MainActivity.kt	(date 1713278824011)
+@@ -13,7 +13,7 @@
+     private lateinit var binding: ActivityMainBinding
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+-
++        setContentView(R.layout.activity_main)
+ 
+     }
+ }
+Index: app/src/main/res/layout/tela_de_registro.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:padding=\"16dp\">\r\n\r\n    <TextView\r\n        android:id=\"@+id/text_nome\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"@string/nome\"\r\n        android:textSize=\"18sp\"\r\n        android:layout_marginTop=\"32dp\"/>\r\n\r\n    <EditText\r\n        android:id=\"@+id/edit_nome\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/text_nome\"\r\n        android:layout_marginTop=\"8dp\"\r\n        android:inputType=\"text\"\r\n        android:hint=\"@string/digite_seu_nome\"/>\r\n\r\n    <TextView\r\n        android:id=\"@+id/text_email\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"@string/e_mail\"\r\n        android:textSize=\"18sp\"\r\n        android:layout_below=\"@id/edit_nome\"\r\n        android:layout_marginTop=\"16dp\"/>\r\n\r\n    <EditText\r\n        android:id=\"@+id/edit_email\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/text_email\"\r\n        android:layout_marginTop=\"8dp\"\r\n        android:inputType=\"textEmailAddress\"\r\n        android:hint=\"@string/digite_seu_e_mail\"/>\r\n\r\n    <TextView\r\n        android:id=\"@+id/text_senha\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"@string/senha\"\r\n        android:textSize=\"18sp\"\r\n        android:layout_below=\"@id/edit_email\"\r\n        android:layout_marginTop=\"16dp\"/>\r\n\r\n    <EditText\r\n        android:id=\"@+id/edit_senha\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/text_senha\"\r\n        android:layout_marginTop=\"8dp\"\r\n        android:inputType=\"textPassword\"\r\n        android:hint=\"@string/digite_sua_senha\"/>\r\n\r\n    <TextView\r\n        android:id=\"@+id/text_confirmar_senha\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"@string/confirmar_senha\"\r\n        android:textSize=\"18sp\"\r\n        android:layout_below=\"@id/edit_senha\"\r\n        android:layout_marginTop=\"16dp\"/>\r\n\r\n    <EditText\r\n        android:id=\"@+id/edit_confirmar_senha\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/text_confirmar_senha\"\r\n        android:layout_marginTop=\"8dp\"\r\n        android:inputType=\"textPassword\"\r\n        android:hint=\"@string/digite_sua_senha_novamente\"/>\r\n\r\n    <Button\r\n        android:id=\"@+id/button_criar_conta\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/edit_confirmar_senha\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"31dp\"\r\n        android:text=\"@string/criar_conta\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/button_entrar\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/button_criar_conta\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"24dp\"\r\n        android:text=\"@string/entrar\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/text_esqueci_senha\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/button_entrar\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"28dp\"\r\n        android:text=\"@string/esqueci_minha_senha\" />\r\n\r\n</RelativeLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/tela_de_registro.xml b/app/src/main/res/layout/tela_de_registro.xml
+--- a/app/src/main/res/layout/tela_de_registro.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/app/src/main/res/layout/tela_de_registro.xml	(date 1713229933015)
+@@ -71,9 +71,10 @@
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/text_confirmar_senha"
+-        android:layout_marginTop="8dp"
+-        android:inputType="textPassword"
+-        android:hint="@string/digite_sua_senha_novamente"/>
++        android:layout_centerHorizontal="true"
++        android:layout_marginTop="12dp"
++        android:hint="@string/digite_sua_senha_novamente"
++        android:inputType="textPassword" />
+ 
+     <Button
+         android:id="@+id/button_criar_conta"
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.EmotionDecoder\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"true\"\r\n            android:label=\"@string/app_name\"\r\n            android:theme=\"@style/Theme.EmotionDecoder\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/app/src/main/AndroidManifest.xml	(date 1713276449770)
+@@ -23,6 +23,34 @@
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
++
++        <activity
++            android:name=".CriacaoConta"
++            android:label="@string/app_name"
++            android:exported="true"/>
++
++        <activity
++            android:name=".TelaRegistro"
++            android:label="@string/app_name"
++            android:exported="true"/>
++
++        <activity
++            android:name=".TelaFerramentas"
++            android:label="@string/app_name"
++            android:exported="true"/>
++
++        <activity
++            android:name=".TelaResultado"
++            android:label="@string/app_name"
++            android:exported="true"/>
++
++        <activity
++            android:name=".TriagemEmocional"
++            android:label="@string/app_name"
++            android:exported="true"/>
++
++
++
+     </application>
+ 
+ </manifest>
+\ No newline at end of file
+Index: app/src/main/java/com/fiap/emotiondecoder/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.fiap.emotiondecoder\r\n\r\nimport android.os.Bundle\r\nimport androidx.activity.ComponentActivity\r\nimport android.widget.Button\r\n\r\nclass MainActivity : ComponentActivity() {\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.activity_main)\r\n\r\n        val buttonStart: Button = findViewById(R.id.button_start)\r\n        buttonStart.setOnClickListener {\r\n            // Ação ao clicar no botão \"Começar\", você pode adicionar aqui\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/fiap/emotiondecoder/MainActivity.kt b/app/src/main/java/com/fiap/emotiondecoder/MainActivity.kt
+--- a/app/src/main/java/com/fiap/emotiondecoder/MainActivity.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/app/src/main/java/com/fiap/emotiondecoder/MainActivity.kt	(date 1713276449793)
+@@ -1,5 +1,6 @@
+ package com.fiap.emotiondecoder
+ 
++import android.content.Intent
+ import android.os.Bundle
+ import androidx.activity.ComponentActivity
+ import android.widget.Button
+@@ -11,7 +12,9 @@
+ 
+         val buttonStart: Button = findViewById(R.id.button_start)
+         buttonStart.setOnClickListener {
+-            // Ação ao clicar no botão "Começar", você pode adicionar aqui
++
++            val navegar = Intent(this, TelaRegistro::class.java)
++            startActivity(navegar)
+         }
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"#422AA8\"\r\n    tools:context=\".MainActivity\">\r\n\r\n    <Toolbar\r\n        android:id=\"@+id/toolbar\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"80dp\"\r\n        android:title=\"@string/titulo\"\r\n        android:titleMarginStart=\"130dp\"\r\n        android:background=\"@drawable/backgroud_toobar\"\r\n        />\r\n\r\n\r\n    <ImageView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_alignParentTop=\"true\"\r\n        android:layout_alignParentEnd=\"true\"\r\n        android:layout_centerInParent=\"true\"\r\n        android:layout_marginTop=\"105dp\"\r\n        android:layout_marginEnd=\"41dp\"\r\n        android:background=\"@drawable/EmotionDecoder\"\r\n        android:foregroundGravity=\"center\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/text_subtitle\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@+id/toolbar\"\r\n        android:layout_alignParentEnd=\"true\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"415dp\"\r\n        android:layout_marginEnd=\"7dp\"\r\n        android:text=\"@string/subtitulo\"\r\n        android:textColor=\"@color/black\"\r\n        android:gravity=\"center\"\r\n        android:textSize=\"16sp\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/button_start\"\r\n        android:layout_width=\"278dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/text_subtitle\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"56dp\"\r\n        android:background=\"@drawable/button_comecar\"\r\n        android:gravity=\"center\"\r\n        android:text=\"@string/comecar\" />\r\n\r\n</RelativeLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1713276449751)
+@@ -3,7 +3,7 @@
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    android:background="#422AA8"
++    android:background="#4E3D97"
+     tools:context=".MainActivity">
+ 
+     <Toolbar
+@@ -16,17 +16,6 @@
+         />
+ 
+ 
+-    <ImageView
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_alignParentTop="true"
+-        android:layout_alignParentEnd="true"
+-        android:layout_centerInParent="true"
+-        android:layout_marginTop="105dp"
+-        android:layout_marginEnd="41dp"
+-        android:background="@drawable/EmotionDecoder"
+-        android:foregroundGravity="center" />
+-
+     <TextView
+         android:id="@+id/text_subtitle"
+         android:layout_width="wrap_content"
+Index: app/src/main/res/layout/tela_resultado.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:padding=\"16dp\">\r\n\r\n    <TextView\r\n        android:id=\"@+id/text_titulo\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_alignParentTop=\"true\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"16dp\"\r\n        android:text=\"@string/feedback\"\r\n        android:textSize=\"24sp\"\r\n        android:textStyle=\"bold\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/text_emoji\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/text_titulo\"\r\n        android:textSize=\"48sp\"\r\n        android:layout_marginTop=\"16dp\"/>\r\n\r\n    <TextView\r\n        android:id=\"@+id/text_descricao\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/text_emoji\"\r\n        android:textSize=\"18sp\"\r\n        android:textStyle=\"italic\"\r\n        android:layout_marginTop=\"16dp\"/>\r\n\r\n    <TextView\r\n        android:id=\"@+id/text_sugestoes\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/text_descricao\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"32dp\"\r\n        android:text=\"@string/sugest_es\"\r\n        android:textSize=\"20sp\"\r\n        android:textStyle=\"bold\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/text_recursos\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/text_sugestoes\"\r\n        android:textSize=\"16sp\"\r\n        android:layout_marginTop=\"16dp\"/>\r\n\r\n</RelativeLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/tela_resultado.xml b/app/src/main/res/layout/tela_resultado.xml
+--- a/app/src/main/res/layout/tela_resultado.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/app/src/main/res/layout/tela_resultado.xml	(date 1713229933040)
+@@ -51,4 +51,13 @@
+         android:textSize="16sp"
+         android:layout_marginTop="16dp"/>
+ 
++    <Button
++        android:id="@+id/buttonFinalizar"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_below="@+id/text_sugestoes"
++        android:layout_centerHorizontal="true"
++        android:layout_marginTop="345dp"
++        android:text="@string/finalizar" />
++
+ </RelativeLayout>
+Index: ../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuServico.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuServico.kt b/../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuServico.kt
+new file mode 100644
+--- /dev/null	(date 1712881270338)
++++ b/../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuServico.kt	(date 1712881270338)
+@@ -0,0 +1,22 @@
++package com.fiap.appinstitucional
++
++import android.annotation.SuppressLint
++import android.os.Bundle
++import android.widget.Button
++import androidx.activity.ComponentActivity
++
++class MenuServico: ComponentActivity() {
++
++    @SuppressLint("MissingInflatedId")
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        setContentView(R.layout.menu_servico)
++
++        val buttonVoltar = findViewById<Button>(R.id.button2)
++
++        buttonVoltar.setOnClickListener {
++            finish()
++        }
++
++    }
++}
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"GRADLE\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"jbr-17\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+--- a/.idea/gradle.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/.idea/gradle.xml	(date 1713278141636)
+@@ -4,16 +4,15 @@
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+-        <option name="testRunner" value="GRADLE" />
+-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="gradleJvm" value="jbr-17" />
++        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+         <option name="modules">
+           <set>
+             <option value="$PROJECT_DIR$" />
+             <option value="$PROJECT_DIR$/app" />
+           </set>
+         </option>
++        <option name="resolveExternalAnnotations" value="false" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: ../AppComanda/app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">AppComanda</string>\r\n    <string name=\"title_activity_segunda\">SegundaActivity</string>\r\n    <string name=\"\"\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../AppComanda/app/src/main/res/values/strings.xml b/../AppComanda/app/src/main/res/values/strings.xml
+--- a/../AppComanda/app/src/main/res/values/strings.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/../AppComanda/app/src/main/res/values/strings.xml	(date 1713278746557)
+@@ -1,5 +1,4 @@
+ <resources>
+     <string name="app_name">AppComanda</string>
+     <string name="title_activity_segunda">SegundaActivity</string>
+-    <string name=""
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/layout/tiagem_emocional.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:padding=\"16dp\">\r\n\r\n    <TextView\r\n        android:id=\"@+id/text_pergunta\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_alignParentTop=\"true\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"19dp\"\r\n        android:text=\"@string/como_voc_est_se_sentindo_agora\"\r\n        android:textColor=\"@color/black\"\r\n        android:textSize=\"18sp\" />\r\n\r\n    <RadioGroup\r\n        android:id=\"@+id/radio_group_emocoes\"\r\n        android:layout_width=\"221dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/text_pergunta\"\r\n        android:layout_alignParentEnd=\"true\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"31dp\"\r\n        android:layout_marginEnd=\"85dp\"\r\n        android:orientation=\"horizontal\">\r\n\r\n        <!-- Emojis representando diferentes emoções -->\r\n        <RadioButton\r\n            android:id=\"@+id/radio_alegria\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"\uD83D\uDE0A\" />\r\n\r\n        <RadioButton\r\n            android:id=\"@+id/radio_tristeza\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"\uD83D\uDE22\" />\r\n\r\n        <RadioButton\r\n            android:id=\"@+id/radio_raiva\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"\uD83D\uDE21\" />\r\n\r\n        <RadioButton\r\n            android:id=\"@+id/radio_medo\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"\uD83D\uDE28\" />\r\n\r\n        <!-- Adicione mais emojis conforme necessário para representar outras emoções -->\r\n    </RadioGroup>\r\n\r\n    <EditText\r\n        android:id=\"@+id/edit_comentarios\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_below=\"@id/radio_group_emocoes\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"56dp\"\r\n        android:hint=\"@string/coment_rios_adicionais_opcional\" />\r\n\r\n</RelativeLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/tiagem_emocional.xml b/app/src/main/res/layout/tiagem_emocional.xml
+--- a/app/src/main/res/layout/tiagem_emocional.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/app/src/main/res/layout/tiagem_emocional.xml	(date 1713229933004)
+@@ -63,4 +63,13 @@
+         android:layout_marginTop="56dp"
+         android:hint="@string/coment_rios_adicionais_opcional" />
+ 
++    <Button
++        android:id="@+id/button_enviar"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_below="@+id/edit_comentarios"
++        android:layout_centerHorizontal="true"
++        android:layout_marginTop="278dp"
++        android:text="@string/enviar" />
++
+ </RelativeLayout>
+Index: build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// Top-level build file where you can add configuration options common to all sub-projects/modules.\r\nplugins {\r\n    id(\"com.android.application\") version \"8.1.1\" apply false\r\n    id(\"org.jetbrains.kotlin.android\") version \"1.8.10\" apply false\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle.kts b/build.gradle.kts
+--- a/build.gradle.kts	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/build.gradle.kts	(date 1713278012398)
+@@ -1,5 +1,5 @@
+ // Top-level build file where you can add configuration options common to all sub-projects/modules.
+ plugins {
+-    id("com.android.application") version "8.1.1" apply false
++    id("com.android.application") version "8.3.1" apply false
+     id("org.jetbrains.kotlin.android") version "1.8.10" apply false
+ }
+\ No newline at end of file
+Index: ../Appinstitucional/app/src/main/res/layout/sobre_empresa.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Appinstitucional/app/src/main/res/layout/sobre_empresa.xml b/../Appinstitucional/app/src/main/res/layout/sobre_empresa.xml
+new file mode 100644
+--- /dev/null	(date 1712882530924)
++++ b/../Appinstitucional/app/src/main/res/layout/sobre_empresa.xml	(date 1712882530924)
+@@ -0,0 +1,47 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++
++    <ImageView
++        android:id="@+id/imageView2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_alignParentStart="true"
++        android:layout_alignParentTop="true"
++        android:layout_marginStart="4dp"
++        android:layout_marginTop="2dp"
++        android:src="@drawable/menu_empresa" />
++
++    <TextView
++        android:id="@+id/textView2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_alignParentTop="true"
++        android:layout_centerHorizontal="true"
++        android:layout_marginTop="43dp"
++        android:text="@string/sobre_a_empresa" />
++
++
++    <TextView
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_alignParentStart="true"
++        android:layout_alignParentBottom="true"
++        android:layout_marginStart="12dp"
++        android:layout_marginEnd="12dp"
++        android:layout_marginBottom="353dp"
++        android:text="@string/lorem" />
++
++    <Button
++        android:id="@+id/button3"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_alignParentBottom="true"
++        android:layout_centerHorizontal="true"
++        android:layout_marginBottom="223dp"
++        android:text="@string/voltar" />
++
++</RelativeLayout>
+\ No newline at end of file
+Index: ../ListView/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"$PROJECT_DIR$/..\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../ListView/.idea/vcs.xml b/../ListView/.idea/vcs.xml
+--- a/../ListView/.idea/vcs.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/../ListView/.idea/vcs.xml	(date 1712191682819)
+@@ -2,5 +2,6 @@
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: ../AppComanda/app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\">\r\n\r\n    <TextView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"\"/>\r\n\r\n</RelativeLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../AppComanda/app/src/main/res/layout/activity_main.xml b/../AppComanda/app/src/main/res/layout/activity_main.xml
+--- a/../AppComanda/app/src/main/res/layout/activity_main.xml	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/../AppComanda/app/src/main/res/layout/activity_main.xml	(date 1713278746551)
+@@ -6,6 +6,10 @@
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:text=""/>
++        android:layout_alignParentTop="true"
++        android:layout_alignParentEnd="true"
++        android:layout_marginTop="310dp"
++        android:layout_marginEnd="201dp"
++        android:text="" />
+ 
+ </RelativeLayout>
+Index: ../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuEmpresa.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuEmpresa.kt b/../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuEmpresa.kt
+new file mode 100644
+--- /dev/null	(date 1712881852189)
++++ b/../Appinstitucional/app/src/main/java/com/fiap/appinstitucional/MenuEmpresa.kt	(date 1712881852189)
+@@ -0,0 +1,22 @@
++package com.fiap.appinstitucional
++
++import android.annotation.SuppressLint
++import android.os.Bundle
++import android.widget.Button
++import androidx.activity.ComponentActivity
++
++class MenuEmpresa: ComponentActivity() {
++
++    @SuppressLint("MissingInflatedId")
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        setContentView(R.layout.sobre_empresa)
++
++        val buttonVoltar = findViewById<Button>(R.id.button3)
++
++        buttonVoltar.setOnClickListener {
++            finish()
++        }
++
++    }
++}
+\ No newline at end of file
+Index: ../AppComanda/app/src/main/java/com/fiap/appcomanda/ui/theme/SegundaActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.fiap.appcomanda.ui.theme\r\n\r\nimport android.os.Bundle\r\nimport android.widget.Button\r\nimport android.widget.TextView\r\nimport androidx.activity.ComponentActivity\r\n\r\n\r\nclass SegundaActivity : ComponentActivity() {\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.segunda_tela)\r\n\r\n        val QantidadeCoxinha = intent.getIntExtra(\"quantidadeCoxina\", 0)\r\n        val quantidadebebida = intent.getIntExtra(\"quantidadeBebida\", 0)\r\n        val totalProdutos = intent.getIntExtra(\"totalProdutos\", 0.0)\r\n        val taxaServicovalor = intent.getIntExtra(\"totalServicoValor\", 0.0)\r\n        val totalComTaxa = intent.getIntExtra(\"totalComTaxa\", 0.0)\r\n\r\n        val textViewQuantidadeCoxinha = findViewById<TextView>(R.id.textViewQuantidadeCoxinha)\r\n        textViewQuantidadeCoxinha.text = \"Quantidade de Coxinhas: $QantidadeCoxinha\"\r\n\r\n        val textViewQuantidadeBebida = findViewById<TextView>(R.id.textViewQuantidadeBebida)\r\n        textViewQuantidadeBebida.text = \"Quantidade de Bebidas: $quantidadebebida\"\r\n\r\n        val textViewSoma = findViewById<TextView>(R.id.textViewSoma)\r\n        textViewSoma.text = \"Soma dos produtos: R$ $totalProdutos\"\r\n\r\n        val taxa = findViewById<TextView>(R.id.textViewTaxa)\r\n        taxa.text = \"Taxa de Servico(10%): R$ $taxaServicovalor\"\r\n\r\n        val total = findViewById<TextView>(R.id.textViewTotal)\r\n        total.text = \"Total a Pagar: R$ $totalComTaxa\"\r\n\r\n        val buttonVoltar = findViewById<Button>(R.id.btVoltar)\r\n        buttonVoltar.setOnClickListener{\r\n            finish()\r\n        }\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../AppComanda/app/src/main/java/com/fiap/appcomanda/ui/theme/SegundaActivity.kt b/../AppComanda/app/src/main/java/com/fiap/appcomanda/ui/theme/SegundaActivity.kt
+--- a/../AppComanda/app/src/main/java/com/fiap/appcomanda/ui/theme/SegundaActivity.kt	(revision 1c118da1997b2ee21b02f51cbb83f63018fdaf8a)
++++ b/../AppComanda/app/src/main/java/com/fiap/appcomanda/ui/theme/SegundaActivity.kt	(date 1713278746566)
+@@ -1,21 +1,24 @@
+ package com.fiap.appcomanda.ui.theme
+ 
++import android.annotation.SuppressLint
+ import android.os.Bundle
+ import android.widget.Button
+ import android.widget.TextView
+ import androidx.activity.ComponentActivity
++import com.fiap.appcomanda.R
+ 
+ 
+ class SegundaActivity : ComponentActivity() {
++    @SuppressLint("SetTextI18n")
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+         setContentView(R.layout.segunda_tela)
+ 
+         val QantidadeCoxinha = intent.getIntExtra("quantidadeCoxina", 0)
+         val quantidadebebida = intent.getIntExtra("quantidadeBebida", 0)
+-        val totalProdutos = intent.getIntExtra("totalProdutos", 0.0)
+-        val taxaServicovalor = intent.getIntExtra("totalServicoValor", 0.0)
+-        val totalComTaxa = intent.getIntExtra("totalComTaxa", 0.0)
++        val totalProdutos = intent.getIntExtra("totalProdutos", 0)
++        val taxaServicovalor = intent.getIntExtra("totalServicoValor", 0)
++        val totalComTaxa = intent.getIntExtra("totalComTaxa", 0)
+ 
+         val textViewQuantidadeCoxinha = findViewById<TextView>(R.id.textViewQuantidadeCoxinha)
+         textViewQuantidadeCoxinha.text = "Quantidade de Coxinhas: $QantidadeCoxinha"
+diff --git a/../ControleDeGastos/.idea/.gitignore b/../ControleDeGastos/.idea/.gitignore
+deleted file mode 100644

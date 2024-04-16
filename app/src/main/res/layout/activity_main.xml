@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#422AA8"
+    tools:context=".MainActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:title="@string/titulo"
+        android:titleMarginStart="130dp"
+        android:background="@drawable/backgroud_toobar"
+        />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="41dp"
+        android:background="@drawable/EmotionDecoder"
+        android:foregroundGravity="center" />
+
+    <TextView
+        android:id="@+id/text_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="415dp"
+        android:layout_marginEnd="7dp"
+        android:text="@string/subtitulo"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_subtitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/button_comecar"
+        android:gravity="center"
+        android:text="@string/comecar" />
+
+</RelativeLayout>
