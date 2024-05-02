@@ -15,40 +15,37 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/text_emoji"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_titulo"
-        android:textSize="48sp"
-        android:layout_marginTop="16dp"/>
-
-    <TextView
-        android:id="@+id/text_descricao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_emoji"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        android:layout_marginTop="16dp"/>
 
     <TextView
         android:id="@+id/text_sugestoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_descricao"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:layout_below="@id/text_titulo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="166dp"
+        android:layout_marginEnd="158dp"
         android:text="@string/sugest_es"
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/text_recursos"
+    <Button
+        android:id="@+id/buttonFinalizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_sugestoes"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="144dp"
+        android:layout_marginBottom="200dp"
+        android:text="Finalizar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="346dp"
+        android:text="TextView" />
 
 </RelativeLayout>
