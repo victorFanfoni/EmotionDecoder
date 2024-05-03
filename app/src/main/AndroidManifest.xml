@@ -50,6 +50,7 @@
             android:parentActivityName=".TelaLogin"
             android:label="@string/app_name"
             android:theme="@style/Theme.EmotionDecoder"/>
+
     </application>
 
 </manifest>

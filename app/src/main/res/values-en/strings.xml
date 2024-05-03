@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">EmotionDecoder</string>
+    <string name="comecar">Start</string>
+    <string name="titulo">EmotionDecoder</string>
+    <string name="subtitulo">Decode your emotions and unlock your potential</string>
+    <string name="nome">Name</string>
+    <string name="e_mail">E-mail</string>
+    <string name="senha">Password</string>
+    <string name="confirmar_senha">Confirm Password</string>
+    <string name="criar_conta">Create Account</string>
+    <string name="como_voc_est_se_sentindo_agora">How are you feeling right now?</string>
+    <string name="coment_rios_adicionais_opcional">Additional comments (optional)</string>
+    <string name="sugest_es">Suggestions:</string>
+    <string name="digite_seu_nome">Enter your name</string>
+    <string name="digite_seu_e_mail">Enter your e-mail</string>
+    <string name="digite_sua_senha">Enter your password</string>
+    <string name="digite_sua_senha_novamente">Enter your password again</string>
+    <string name="entrar">Log in</string>
+    <string name="esqueci_minha_senha">I forgot my password</string>
+    <string name="feedback">Feedback</string>
+    <string name="Logo">TODO</string>
+    <string name="enviar">Send</string>
+    <string name="medo">😨</string>
+    <string name="raiva">😡</string>
+    <string name="triste">😢</string>
+    <string name="feliz">😊</string>
+    <string name="et_email_text">Enter your email</string>
+    <string name="et_password_text">Enter your password</string>
+    <string name="btn_sign_in_text">Sign in</string>
+    <string name="create_account_text">Don\'t have an account? <font color="#80b918">Sign Up</font></string>
+    <string name="title_text">Welcome to Firebase \nAuthentication Tutorial!</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="btn_create_account_text">Register</string>
+    <string name="et_confirm_password">Confirm your password</string>
+    <string name="btn_register_with_google">Login with Google</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nao_tem_conta_criar">Don t have an account? Sing Up</string>
+    <string name="como_voce_esta_sentindo_agora">How are you feeling now?</string>
+
+</resources>

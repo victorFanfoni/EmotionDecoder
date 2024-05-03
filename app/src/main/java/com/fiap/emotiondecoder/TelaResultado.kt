@@ -1,6 +1,7 @@
 package com.fiap.emotiondecoder
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -14,16 +15,25 @@ class TelaResultado : ComponentActivity() {
 
         val buttonFinalizar = findViewById<Button>(R.id.buttonFinalizar)
         val textoResultado = findViewById<TextView>(R.id.textView)
+        val buttonVoltar = findViewById<Button>(R.id.buttonVoltarTelaP)
 
-        // Recebe o relatório enviado como extra
         val relatorio = intent.getStringExtra("relatorio")
 
-        // Exibe o relatório no TextView
         textoResultado.text = relatorio
 
         buttonFinalizar.setOnClickListener {
-            // Aqui você pode adicionar qualquer lógica adicional antes de finalizar a tela
-            finish()
+            navigateToNextScreen()
         }
+
+        buttonVoltar.setOnClickListener {
+            val intent = Intent(this, TriagemEmocional::class.java)
+            startActivity(intent)
+        }
+
+    }
+    private fun navigateToNextScreen() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

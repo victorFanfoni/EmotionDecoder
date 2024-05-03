@@ -2,85 +2,109 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="16dp">
+    android:background="@color/dark_cyan_green">
 
 
+    <View
+        android:id="@+id/conteirerTop"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/backgroud_view_top" />
 
-    <TextView
-        android:id="@+id/text_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="50dp"
-        android:text="@string/e_mail"
-        android:textSize="18sp" />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignStart="@+id/conteirerTop"
+        android:layout_alignTop="@+id/conteirerTop"
+        android:layout_alignEnd="@+id/conteirerTop"
+        android:layout_alignBottom="@+id/conteirerTop"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="229dp"
+        android:layout_marginBottom="39dp"
+        android:contentDescription="@string/Logo"
+        android:src="@drawable/emotiondecoder" />
 
     <EditText
         android:id="@+id/edit_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_email"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:autofillHints=""
-        android:hint="@string/digite_seu_e_mail"
-        android:inputType="textEmailAddress" />
-
-    <TextView
-        android:id="@+id/text_senha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/senha"
+        android:layout_below="@+id/conteirerTop"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableEnd="@drawable/ic_email"
+        android:hint="@string/e_mail"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:backgroundTint="#BCBCBF"
+        android:maxLines="1"
+        android:padding="15dp"
         android:textSize="18sp"
-        android:layout_below="@id/edit_email"
-        android:layout_marginTop="20dp"/>
+        android:background="@drawable/background_edittext"
+        android:autofillHints="emailAddress" />
 
     <EditText
         android:id="@+id/edit_senha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_senha"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="5dp"
-        android:autofillHints=""
+        android:background="@drawable/background_edittext"
+        android:layout_below="@id/edit_email"
         android:hint="@string/digite_sua_senha"
-        android:inputType="textPassword" />
+        android:backgroundTint="#BCBCBF"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="15dp"
+        android:inputType="textPassword"
+        android:autofillHints="password"/>
 
     <TextView
         android:id="@+id/button_criar_conta"
-        android:layout_width="131dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button_entrar"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="122dp"
-        android:layout_marginTop="34dp"
-        android:text="Nao tem conta? Criar" />
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="37dp"
+        android:gravity="center_horizontal"
+        android:text="@string/nao_tem_conta_criar"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/button_entrar"
-        android:layout_width="157dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_below="@+id/edit_senha"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="165dp"
-        android:layout_marginEnd="112dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/button_comecar"
         android:text="@string/entrar" />
 
-    <Button
-        android:id="@+id/text_esqueci_senha"
+    <View
+        android:id="@+id/view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_criar_conta"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/white"
-        android:text="@string/esqueci_minha_senha" />
+        android:layout_height="64dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/backgroud_view_bottom" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="130dp"
+        android:layout_height="113dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="81dp"
+        android:text="Seja bem-vindo\n             ao EmotionDecoder!!" />
 
 </RelativeLayout>

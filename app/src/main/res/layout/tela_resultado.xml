@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/buttonVoltarTelaP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="182dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/button_comecar"
+        android:text="Voltar para Triagem Emocional" />
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroud_toobar"/>
 
     <TextView
         android:id="@+id/text_titulo"
@@ -22,30 +39,33 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/text_titulo"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="166dp"
-        android:layout_marginEnd="158dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="159dp"
         android:text="@string/sugest_es"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/buttonFinalizar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="144dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/button_comecar"
         android:text="Finalizar" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/text_sugestoes"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="165dp"
-        android:layout_marginTop="346dp"
-        android:text="TextView" />
+        android:layout_marginTop="187dp"
+        android:text="text" />
 
 </RelativeLayout>

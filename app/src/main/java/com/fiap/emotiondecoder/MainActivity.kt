@@ -20,6 +20,7 @@ class MainActivity : ComponentActivity() {
         buttonStart.setOnClickListener {
           val navegar = Intent(this, TelaLogin::class.java)
             startActivity(navegar)
+            finish()
         }
     }
 

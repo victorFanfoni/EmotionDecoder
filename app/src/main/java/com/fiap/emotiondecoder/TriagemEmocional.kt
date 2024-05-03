@@ -32,12 +32,14 @@ class TriagemEmocional : ComponentActivity() {
                     else -> ""
                 }
 
-                // Cria o relatório com base na emoção selecionada e nos comentários
                 val relatorio = criarRelatorio(emocaoSelecionada, comentarios)
+                val dicas = gerarDicas(emocaoSelecionada, comentarios)
 
-                // Envia o relatório como extra para a tela de resultado
+                // Adicionando as dicas ao relatório
+                val relatorioCompleto = "$relatorio\n\n$dicas"
+
                 val intent = Intent(this, TelaResultado::class.java)
-                intent.putExtra("relatorio", relatorio)
+                intent.putExtra("relatorio", relatorioCompleto)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
@@ -47,34 +49,46 @@ class TriagemEmocional : ComponentActivity() {
 
     private fun criarRelatorio(emocao: String, comentarios: String): String {
         val relatorio = StringBuilder()
+
         relatorio.append("Emoção: $emocao\n")
         relatorio.append("Comentários: $comentarios\n")
-
-        // Adiciona dicas personalizadas com base no conteúdo do comentário
-        relatorio.append(gerarDicas(comentarios))
 
         return relatorio.toString()
     }
 
-    private fun gerarDicas(comentarios: String): String {
+    private fun gerarDicas(emocao: String, comentarios: String): String {
         val dicas = StringBuilder()
 
-        if (comentarios.contains("triste", ignoreCase = true)) {
-            dicas.append("Dica para tristeza: Tente praticar atividades que te façam feliz e procure apoio de amigos e familiares.\n")
+        when (emocao) {
+            "Feliz" -> {
+                dicas.append("Dicas para se sentir mais feliz:\n")
+                dicas.append("- Continue fazendo o que te deixa feliz e aproveite os momentos positivos ao máximo.\n")
+            }
+            "Triste" -> {
+                dicas.append("Dicas para lidar com a tristeza:\n")
+                dicas.append("- Tente praticar atividades que te façam feliz e procure apoio de amigos e familiares.\n")
+            }
+            "Raiva" -> {
+                dicas.append("Dicas para lidar com a raiva:\n")
+                dicas.append("- Respire fundo e tente se acalmar antes de reagir. Procure resolver conflitos de maneira pacífica.\n")
+            }
+            "Medo" -> {
+                dicas.append("Dicas para superar o medo:\n")
+                dicas.append("- Identifique a causa do seu medo e procure enfrentá-lo aos poucos, buscando apoio se necessário.\n")
+            }
         }
 
-        if (comentarios.contains("raiva", ignoreCase = true)) {
-            dicas.append("Dica para raiva: Respire fundo e tente se acalmar antes de reagir. Procure resolver conflitos de maneira pacífica.\n")
-        }
+        if (comentarios.isNotBlank()) {
+            dicas.append("\nDicas adicionais com base no seu comentário:\n")
 
-        if (comentarios.contains("medo", ignoreCase = true)) {
-            dicas.append("Dica para medo: Identifique a causa do seu medo e procure enfrentá-lo aos poucos, buscando apoio se necessário.\n")
-        }
+            if (comentarios.contains("solidão", ignoreCase = true)) {
+                dicas.append("- Se estiver se sentindo solitário, considere participar de atividades sociais ou conversar com alguém próximo.\n")
+            }
 
-        if (comentarios.contains("feliz", ignoreCase = true)) {
-            dicas.append("Dica para felicidade: Continue fazendo o que te deixa feliz e aproveite os momentos positivos ao máximo.\n")
+            if (comentarios.contains("stress", ignoreCase = true)) {
+                dicas.append("- Se estiver se sentindo estressado, tente praticar exercícios de relaxamento ou meditação para aliviar a tensão.\n")
+            }
         }
-
         return dicas.toString()
     }
 }
