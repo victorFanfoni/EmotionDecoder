@@ -1,5 +1,6 @@
     package com.fiap.emotiondecoder
 
+    import android.app.AlertDialog
     import android.content.Intent
     import android.os.Bundle
     import android.util.Log
@@ -18,6 +19,7 @@
     import com.google.firebase.auth.FirebaseAuthWeakPasswordException
     import com.google.firebase.auth.FirebaseUser
     import com.google.firebase.auth.auth
+    import com.google.firebase.auth.ktx.auth
 
     class CriacaoConta : ComponentActivity() {
         private lateinit var auth: FirebaseAuth
@@ -32,78 +34,70 @@
 
             val buttonCadastro = binding?.buttonCriarConta
 
+            binding?.VoltaLogin?.setOnClickListener {
+                val intent = Intent(this, TelaLogin::class.java)
+                startActivity(intent)
+                finish()
+            }
+
             buttonCadastro?.setOnClickListener {
 
-                val email: String = binding?.editTextEmail?.text.toString()
-                val senha: String = binding?.editTextSenha?.text.toString()
-                val confirmarSenha: String = binding?.editTextConfirmarSenha?.text.toString()
+                val email = binding?.editTextEmail?.text.toString()
+                val senha = binding?.editTextSenha?.text.toString()
+                val confirmaSenha = binding?.editTextConfirmarSenha?.text.toString()
 
-                when {
-                    email.isEmpty() -> binding?.editTextEmail?.error = "Preencha o E-mail!"
-                    !email.contains("@") -> mostrarSnackbar("E-mail inválido!")
-                    senha.isEmpty() -> binding?.editTextSenha?.error = "Preencha a senha!!"
-                    confirmarSenha.isEmpty() -> binding?.editTextConfirmarSenha?.error = "Preencha a confirmaçao de senha!!"
-                    senha != confirmarSenha -> mostrarSnackbar("As senhas devem ser identicas")
-                    senha.length <= 5 -> mostrarSnackbar("A senha deve ter pelo menos 6 caracteres!")
-                    else -> createUserWithEmailAndPassword(email, senha)
-
+                if (email.isEmpty() || senha.isEmpty() || confirmaSenha.isEmpty()){
+                    binding?.editTextEmail?.error = getString(R.string.email)
+                    binding?.editTextSenha?.error = getString(R.string.senhaAlert)
+                    binding?.editTextConfirmarSenha?.error = getString(R.string.campoConfirSenha)
+                    Toast.makeText(this, getString(R.string.preencha_Todos_campos), Toast.LENGTH_SHORT).show()
                 }
-
-    //            if (email.isEmpty() || senha.isEmpty() || confirmarSenha.isEmpty()) {
-    //                Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
-    //            } else if (senha != confirmarSenha) {
-    //                Toast.makeText(this, "As senhas não correspondem", Toast.LENGTH_SHORT).show()
-    //            } else if (senha.length < 6) {
-    //                Toast.makeText(this, "A senha deve ter no mínimo 6 caracteres", Toast.LENGTH_SHORT).show()
-    //            } else {
-    //                createUserWithEmailAndPassword(email, senha)
-    //            }
+                else if (!email.contains("@")){
+                    showAlert(getString(R.string.Emailerr), getString(R.string.exEmail))
+                    Toast.makeText(this, getString(R.string.Emailerr), Toast.LENGTH_SHORT).show()
+                }
+                else if (senha != confirmaSenha){
+                    Toast.makeText(this, getString(R.string.senhaigual), Toast.LENGTH_SHORT).show()
+                }
+                else if (senha.length <= 5){
+                    Toast.makeText(this, getString(R.string.qtdCaracSenha), Toast.LENGTH_SHORT).show()
+                }
+                else {
+                    createAccount(email, senha)
+                }
             }
         }
 
-        private fun createUserWithEmailAndPassword(email: String, password: String) {
-            auth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        Log.d(TAG, "createUserWithEmailAndPassword: success")
-                        navigateToLoginScreen()
-                    }
-                }
-                .addOnFailureListener { exception ->
-                    Log.d(TAG, "createUserWithEmailAndPassword: failure", exception)
-                    when (exception) {
-                        is FirebaseAuthWeakPasswordException -> {
-                            binding?.editTextSenha?.error = "A senha deve ter pelo menos 6 caracteres"
-                        }
-                        is FirebaseAuthInvalidCredentialsException -> {
-                            binding?.editTextEmail?.error = "E-mail inválido"
-                        }
-                        is FirebaseAuthUserCollisionException -> {
-                            binding?.editTextEmail?.error = "Este e-mail já está em uso"
-                        }
-                        else -> {
-                            Toast.makeText(
-                                this@CriacaoConta,
-                                "Erro ao criar a conta: ${exception.message}",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-                    }
-                }
-        }
-
-        private fun mostrarSnackbar(mensagem: String) {
-            val snackbar = Snackbar.make(binding!!.root, mensagem, Snackbar.LENGTH_SHORT)
-            snackbar.show()
-        }
-
-        private fun navigateToLoginScreen() {
-            val intent = Intent(this, TelaLogin::class.java)
-            startActivity(intent)
-            finish()
+        private fun showAlert(title: String, message: String) {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle(title)
+            builder.setMessage(message)
+            builder.setPositiveButton("Ok"){dialog, _ -> dialog.dismiss()}
+            val dialog = builder.create()
+            dialog.show()
         }
 
         companion object {
             private const val TAG = "EmailAndPassword"
+        }
+        fun createAccount (email: String, password: String) {
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        val user = com.google.firebase.ktx.Firebase.auth.currentUser
+                        user!!.sendEmailVerification()
+                            .addOnCompleteListener { task ->
+                                if (task.isSuccessful) {
+                                    println("Email sent.")
+                                }
+                            }
+                        Toast.makeText(this, getString(R.string.cadastroOk), Toast.LENGTH_LONG).show()
+                        val intent = Intent(this, TelaLogin::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        Toast.makeText(this, getString(R.string.usuario_ja_cadastrado), Toast.LENGTH_LONG).show()
+                    }
+                }
         }
     }

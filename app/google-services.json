@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "449357383117",
+    "project_id": "emotiondecoder-924ac",
+    "storage_bucket": "emotiondecoder-924ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449357383117:android:7a6d69e4f087dedd593084",
+        "android_client_info": {
+          "package_name": "com.fiap.emotiondecoder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd9pYeogODsniuJUuOPwS3YmFR87oMCLA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

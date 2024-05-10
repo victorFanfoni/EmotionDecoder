@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#23FFB0">
+    android:background="@color/dark_cyan_green">
 
     <View
         android:id="@+id/conteirerTop"
@@ -21,17 +21,17 @@
         android:layout_marginEnd="66dp"
         android:text="@string/como_voc_est_se_sentindo_agora"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold"/>
 
     <RadioGroup
         android:id="@+id/radio_group_emocoes"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
         android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="74dp"
         android:layout_marginEnd="20dp"
         android:orientation="horizontal">
 
@@ -56,7 +56,8 @@
         <RadioButton
             android:id="@+id/radio_medo"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
             android:text="@string/medo" />
 
     </RadioGroup>
@@ -65,18 +66,19 @@
         android:id="@+id/edit_comentarios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/radio_group_emocoes"
+        android:layout_below="@+id/radio_group_emocoes"
         android:layout_marginStart="20dp"
         android:layout_marginTop="97dp"
         android:layout_marginEnd="20dp"
+        android:autofillHints="comentarioEmocao"
         android:background="@drawable/background_edittext"
         android:backgroundTint="#FFFFFF"
         android:hint="@string/coment_rios_adicionais_opcional"
+        android:inputType="text"
         android:maxLines="1"
         android:padding="15dp"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        android:autofillHints="comentarioEmocao" />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/button_enviar"
@@ -93,14 +95,20 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="276dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/conteirerTop"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="97dp"
-        android:text="@string/como_voce_esta_sentindo_agora" />
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="63dp"
+        android:shadowDx="-2"
+        android:shadowDy="-2"
+        android:shadowRadius="1"
+        android:text="@string/como_voce_esta_sentindo_agora"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -1,18 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <resources>
     <string name="app_name">EmotionDecoder</string>
     <string name="comecar">Start</string>
     <string name="titulo">EmotionDecoder</string>
     <string name="subtitulo">Decode your emotions and unlock your potential</string>
     <string name="nome">Name</string>
-    <string name="e_mail">E-mail</string>
+    <string name="e_mail">Email</string>
     <string name="senha">Password</string>
     <string name="confirmar_senha">Confirm Password</string>
     <string name="criar_conta">Create Account</string>
     <string name="como_voc_est_se_sentindo_agora">How are you feeling right now?</string>
-    <string name="coment_rios_adicionais_opcional">Additional comments (optional)</string>
+    <string name="coment_rios_adicionais_opcional">Additional Comments</string>
     <string name="sugest_es">Suggestions:</string>
     <string name="digite_seu_nome">Enter your name</string>
-    <string name="digite_seu_e_mail">Enter your e-mail</string>
+    <string name="digite_seu_e_mail">Enter your email</string>
     <string name="digite_sua_senha">Enter your password</string>
     <string name="digite_sua_senha_novamente">Enter your password again</string>
     <string name="entrar">Log in</string>
@@ -20,25 +21,66 @@
     <string name="feedback">Feedback</string>
     <string name="Logo">TODO</string>
     <string name="enviar">Send</string>
-    <string name="medo">😨</string>
-    <string name="raiva">😡</string>
-    <string name="triste">😢</string>
-    <string name="feliz">😊</string>
+    <string name="email" translatable="false">Fill in the Email field!</string>
+    <string name="senhaAlert" translatable="false">Fill in the Password field!</string>
+    <string name="Emailerr" translatable="false">Invalid email</string>
+    <string name="net" translatable="false">No internet connection</string>
+    <string name="errLog" translatable="false">Invalid email or password!</string>
+    <string name="medo">Fear😨</string>
+    <string name="raiva">Anger😡</string>
+    <string name="triste">Sadness😔</string>
+    <string name="feliz">Happiness😄</string>
     <string name="et_email_text">Enter your email</string>
     <string name="et_password_text">Enter your password</string>
     <string name="btn_sign_in_text">Sign in</string>
     <string name="create_account_text">Don\'t have an account? <font color="#80b918">Sign Up</font></string>
     <string name="title_text">Welcome to Firebase \nAuthentication Tutorial!</string>
-    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_register">Register Activity</string>
+    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
     <string name="btn_create_account_text">Register</string>
     <string name="et_confirm_password">Confirm your password</string>
     <string name="btn_register_with_google">Login with Google</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="nao_tem_conta_criar">Don t have an account? Sing Up</string>
+    <string name="nao_tem_conta_criar">Don\'t have an account? Create</string>
     <string name="como_voce_esta_sentindo_agora">How are you feeling now?</string>
-
+    <string name="voltar_para_triagem_emocional">Return to Emotional Screening</string>
+    <string name="finalizar">Finish</string>
+    <string name="voce_esta_a_um_passo_para_a_felicidade">You are one step closer to happiness</string>
+    <string name="seja_bem_vindo_n_ao_emotiondecoder">Welcome\n   to\nEmotionDecoder!!</string>
+    <string name="exEmail" translatable="false">Example email:\nusuario@gmail.com</string>
+    <string name="senhaigual">Passwords must be identical</string>
+    <string name="qtdCaracSenha">The password must be at least 6 characters long!</string>
+    <string name="campoConfirSenha">Fill in the Password Confirmation field!</string>
+    <string name="preencha_Todos_campos">Fill in all fields</string>
+    <string name="cadastroOk">Successful registration</string>
+    <string name="usuario_ja_cadastrado">Already registered user</string>
+    <string name="email_redefini_senha">A password reset email has been sent to $email</string>
+    <string name="falha_email_redefinSenha">Failed to send password reset email. Please try again</string>
+    <string name="relatorio">Report</string>
+    <string name="emocao">Emotion</string>
+    <string name="Comentarios">Comments</string>
+    <string name="Dicas_feliz">Tips to feel happier:</string>
+    <string name="comentarioFeliz">- Keep doing what makes you happy and make the most of the positive moments.</string>
+    <string name="Dica_Triste">Tips for dealing with sadness:</string>
+    <string name="comentarioTriste">- Try to practice activities that make you happy and seek support from friends and family.</string>
+    <string name="DicaRaiva">Tips for dealing with anger:</string>
+    <string name="comentarioRaiva">- Take a deep breath and try to calm down before reacting. Try to resolve conflicts peacefully.</string>
+    <string name="DicaMedo">Tips for overcoming fear:</string>
+    <string name="comentarioMedo">- Identify the cause of your fear and try to face it little by little, seeking support if necessary.</string>
+    <string name="dica_base_comentario">Additional tips based on your comment:</string>
+    <string name="solidao">Loneliness</string>
+    <string name="dica">- If you\'re feeling lonely, consider participating in social activities or talking to someone close to you.</string>
+    <string name="stress">Stress</string>
+    <string name="dicaStress">- If you are feeling stressed, try practicing relaxation exercises or meditation to relieve tension.</string>
+    <string name="redefinir_senha">Reset Password</string>
+    <string name="voltar">To go back</string>
+    <string name="esqueceu_a_senha">Forgot password?</string>
+    <string name="voltar_para_login">Back to Login</string>
+    <string name="rosto_triste">sad face</string>
 </resources>

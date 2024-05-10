@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.ComponentActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class TelaResultado : ComponentActivity() {
     @SuppressLint("MissingInflatedId")
@@ -17,23 +18,21 @@ class TelaResultado : ComponentActivity() {
         val textoResultado = findViewById<TextView>(R.id.textView)
         val buttonVoltar = findViewById<Button>(R.id.buttonVoltarTelaP)
 
-        val relatorio = intent.getStringExtra("relatorio")
+        val relatorio = intent.getStringExtra(getString(R.string.relatorio))
 
         textoResultado.text = relatorio
 
         buttonFinalizar.setOnClickListener {
-            navigateToNextScreen()
+            FirebaseAuth.getInstance().signOut()
+            val intent = Intent(this, TelaLogin::class.java)
+            startActivity(intent)
+            finish()
         }
 
         buttonVoltar.setOnClickListener {
-            val intent = Intent(this, TriagemEmocional::class.java)
+            val intent = Intent(this, PasswordResetActivity::class.java)
             startActivity(intent)
         }
 
-    }
-    private fun navigateToNextScreen() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-        finish()
     }
 }

@@ -1,18 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <string name="app_name">EmotionDecoder</string>
-    <string name="comecar">Começar</string>
+    <string name="comecar">Comecar</string>
     <string name="titulo">EmotionDecoder</string>
-    <string name="subtitulo">Decodifique suas emoções e desbloqueie seu potencial</string>
+    <string name="subtitulo">Decodifique suas emocoes e desbloqueie seu potencial</string>
     <string name="nome">Nome</string>
-    <string name="e_mail">E-mail</string>
+    <string name="e_mail">Email</string>
     <string name="senha">Senha</string>
-    <string name="confirmar_senha">Confirmar Senha</string>
-    <string name="criar_conta">Criar Conta</string>
-    <string name="como_voc_est_se_sentindo_agora">Como você está se sentindo agora?</string>
-    <string name="coment_rios_adicionais_opcional">Comentários adicionais</string>
-    <string name="sugest_es">Sugestões:</string>
+    <string name="confirmar_senha">ConfirmarSenha</string>
+    <string name="criar_conta">CriarConta</string>
+    <string name="como_voc_est_se_sentindo_agora">Como voce esta se sentindo agora?</string>
+    <string name="coment_rios_adicionais_opcional">Comentarios adicionais</string>
+    <string name="sugest_es">Sugestoes</string>
     <string name="digite_seu_nome">Digite seu nome</string>
-    <string name="digite_seu_e_mail">Digite seu e-mail</string>
+    <string name="digite_seu_e_mail">Digite seu email</string>
     <string name="digite_sua_senha">Digite sua senha</string>
     <string name="digite_sua_senha_novamente">Digite sua senha novamente</string>
     <string name="entrar">Entrar</string>
@@ -20,17 +21,22 @@
     <string name="feedback">Feedback</string>
     <string name="Logo">TODO</string>
     <string name="enviar">Enviar</string>
+    <string name="email" translatable="false">Preencha o campo Email!</string>
+    <string name="senhaAlert" translatable="false">Preencha o campo Senha!</string>
+    <string name="Emailerr" translatable="false">Email invalido</string>
+    <string name="net" translatable="false">Sem conexao com a internet</string>
+    <string name="errLog" translatable="false">Email ou senha invalidos!</string>
     <string name="medo">Medo😨</string>
     <string name="raiva">Raiva😡</string>
-    <string name="triste">Triste😢</string>
-    <string name="feliz">Feliz😊</string>
+    <string name="triste">Triste😔</string>
+    <string name="feliz">Feliz😄</string>
     <string name="et_email_text">Enter your email</string>
     <string name="et_password_text">Enter your password</string>
     <string name="btn_sign_in_text">Sign in</string>
     <string name="create_account_text">Don\'t have an account? <font color="#80b918">Sign Up</font></string>
-    <string name="title_text">Welcome to Firabse \nAuthentication Tutorial!</string>
+    <string name="title_text">Welcome to Firebase \nAuthentication Tutorial!</string>
     <string name="title_activity_register">RegisterActivity</string>
-        <!-- Strings used for fragments for navigation -->
+    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
@@ -39,9 +45,42 @@
     <string name="btn_create_account_text">Register</string>
     <string name="et_confirm_password">Confirm your password</string>
     <string name="btn_register_with_google">Login with Google</string>
-        <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nao_tem_conta_criar">Nao tem conta? Criar</string>
     <string name="como_voce_esta_sentindo_agora">Como voce esta sentindo Agora?</string>
-
+    <string name="voltar_para_triagem_emocional">Voltar para Triagem Emocional</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="voce_esta_a_um_passo_para_a_felicidade">Voce esta a um passo para a felicidade</string>
+    <string name="seja_bem_vindo_n_ao_emotiondecoder">Seja bem-vindo\n ao EmotionDecoder!!</string>
+    <string name="exEmail" translatable="false">Email exemplo:\nusuario@gmail.com</string>
+    <string name="senhaigual">As senhas devem ser identicas</string>
+    <string name="qtdCaracSenha">A senha deve ter pelo menos 6 caracteres!</string>
+    <string name="campoConfirSenha">Preencha o campo Confirmacao de Senha!</string>
+    <string name="preencha_Todos_campos">Preencha todos os campos</string>
+    <string name="cadastroOk">Cadastro realizado com sucesos</string>
+    <string name="usuario_ja_cadastrado">Usuario ja cadastrado</string>
+    <string name="email_redefini_senha">Um email de redefinicao de senha foi enviado para $email</string>
+    <string name="falha_email_redefinSenha">Falha ao enviar email de redefinicao de senha. Por favor, tente novamente</string>
+    <string name="relatorio">Relatorio</string>
+    <string name="emocao">Emocao</string>
+    <string name="Comentarios">Comentarios</string>
+    <string name="Dicas_feliz">Dicas para se sentir mais feliz:</string>
+    <string name="comentarioFeliz">- Continue fazendo o que te deixa feliz e aproveite os momentos positivos ao maximo.</string>
+    <string name="Dica_Triste">Dicas para lidar com a tristeza:</string>
+    <string name="comentarioTriste">- Tente praticar atividades que te facam feliz e procure apoio de amigos e familiares.</string>
+    <string name="DicaRaiva">Dicas para lidar com a raiva:</string>
+    <string name="comentarioRaiva">- Respire fundo e tente se acalmar antes de reagir. Procure resolver conflitos de maneira pacifica.</string>
+    <string name="DicaMedo">Dicas para superar o medo:</string>
+    <string name="comentarioMedo">- Identifique a causa do seu medo e procure enfrenta-lo aos poucos, buscando apoio se necessario.</string>
+    <string name="dica_base_comentario">Dicas adicionais com base no seu comentario:</string>
+    <string name="solidao">Solidao</string>
+    <string name="dica">- Se estiver se sentindo solitario, considere participar de atividades sociais ou conversar com alguem proximo.</string>
+    <string name="stress">Stress</string>
+    <string name="dicaStress">- Se estiver se sentindo estressado, tente praticar exercicios de relaxamento ou meditacao para aliviar a tensao.</string>
+    <string name="redefinir_senha">redefinir Senha</string>
+    <string name="voltar">Voltar</string>
+    <string name="esqueceu_a_senha">Esqueceu a Senha?</string>
+    <string name="voltar_para_login">Voltar para Login</string>
+    <string name="rosto_triste">rosto Triste</string>
 </resources>
