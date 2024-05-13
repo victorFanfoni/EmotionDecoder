@@ -13,9 +13,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         val buttonStart: Button = findViewById(R.id.button_start)
-
 
         buttonStart.setOnClickListener {
           val navegar = Intent(this, TelaLogin::class.java)
@@ -23,5 +21,4 @@ class MainActivity : ComponentActivity() {
             finish()
         }
     }
-
 }

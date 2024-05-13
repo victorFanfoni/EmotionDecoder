@@ -30,7 +30,7 @@ class TelaResultado : ComponentActivity() {
         }
 
         buttonVoltar.setOnClickListener {
-            val intent = Intent(this, PasswordResetActivity::class.java)
+            val intent = Intent(this, TriagemEmocional::class.java)
             startActivity(intent)
         }
 
