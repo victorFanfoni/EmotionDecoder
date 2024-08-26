@@ -1,0 +1,33 @@
+package com.fiap.emotiondecoder.ui.view
+
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.activity.ComponentActivity
+import com.fiap.emotiondecoder.R
+import com.fiap.emotiondecoder.ui.controller.ResetPasswordController
+
+class ResetPasswordActivity : ComponentActivity() {
+
+    private lateinit var emailEditText: EditText
+    private lateinit var resetPasswordButton: Button
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_reset_password)
+
+        emailEditText = findViewById(R.id.edit_email)
+        resetPasswordButton = findViewById(R.id.buttonResetPassword)
+
+        resetPasswordButton.setOnClickListener {
+            val email = emailEditText.text.toString()
+            if (email.isNotBlank()) {
+                val resetPasswordController = ResetPasswordController(this)
+                resetPasswordController.sendPasswordResetEmail(email)
+            } else {
+                Toast.makeText(this, "Por favor, insira um e-mail válido.", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+}

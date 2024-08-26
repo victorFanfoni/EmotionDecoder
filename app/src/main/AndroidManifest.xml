@@ -26,37 +26,14 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".TelaLogin"
-            android:exported="true"
-            android:parentActivityName=".TelaLogin"
-            android:label="@string/app_name"/>
-
-        <activity
-            android:name=".CriacaoConta"
-            android:exported="true"
-            android:parentActivityName=".TelaLogin"
-            android:label="@string/app_name"/>
-
-        <activity
-            android:name=".TriagemEmocional"
-            android:exported="true"
-            android:parentActivityName=".TelaLogin"
-            android:label="@string/app_name"/>
-
-        <activity
-            android:name=".TelaResultado"
-            android:exported="true"
-            android:parentActivityName=".TelaLogin"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.EmotionDecoder"/>
-
-        <activity
-            android:name=".PasswordResetActivity"
-            android:exported="true"
-            android:parentActivityName=".TelaLogin"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat"/>
+        <activity android:name=".ui.view.CreateAccount" />
+        <activity android:name=".ui.view.ResetPasswordActivity" />
+        <activity android:name=".ui.view.EmotionalScreening" />
+        <activity android:name=".ui.view.ResultScreen" />
+        <activity android:name=".ui.view.Login" />
+        <activity android:name=".ui.controller.ResetPasswordController" />
+        <activity android:name=".ui.controller.EmotionalScreeningController" />
+        <activity android:name=".ui.controller.ResultScreenController" />
 
 
 
