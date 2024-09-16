@@ -58,4 +58,4 @@ O projeto é organizado da seguinte forma:
 
 1. Clone o repositório:
    ```bash
-   git clone <URL do repositório>
+   git clone <https://github.com/victorFanfoni/EmotionDecoder.git>
