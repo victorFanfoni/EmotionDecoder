@@ -1,35 +1,37 @@
 # EmotionDecoder
 
-## Nome dos integrantes:
+## Nome dos Integrantes
+
 - Victor Fanfoni RM-99173
 - Helena Paixão RM-550929
 - Gustavo Costa RM-99102
 - Julia Nery RM-552292
 - Giulia Pina RM-97694
-## Explanação do Projeto
 
-**EmotionDecoder** é um aplicativo Android desenvolvido com o objetivo de analisar e interpretar emoções dos usuários. O aplicativo adota o padrão MVC (Model-View-Controller) para uma clara separação de responsabilidades e uma arquitetura organizada. 
+## Sobre o Projeto
+
+**EmotionDecoder** é um aplicativo Android desenvolvido para ajudar os usuários a entender e interpretar suas emoções. Adotando o padrão arquitetônico MVC (Model-View-Controller), o projeto busca garantir uma estrutura de código bem organizada e uma experiência de usuário fluida, facilitando a manutenção e a evolução do aplicativo.
 
 ### Funcionalidades
 
-- **Tela de Criação de Conta**: Permite ao usuário criar uma nova conta com validação de entrada e integração com Firebase.
-- **Tela de Triagem Emocional**: Coleta e analisa as emoções do usuário usando questionários e ferramentas de análise.
-- **Tela de Login**: Fornece opções de autenticação para acesso ao aplicativo.
-- **Tela de Redefinição de Senha**: Permite ao usuário redefinir sua senha em caso de esquecimento.
-- **Tela de Resultados**: Exibe os resultados da análise emocional com base nas respostas fornecidas.
+- **Tela de Criação de Conta**: Permite aos novos usuários criar uma conta com validação de dados e integração com Firebase.
+- **Tela de Triagem Emocional**: Coleta e analisa as emoções dos usuários através de questionários e ferramentas de análise, oferecendo insights valiosos.
+- **Tela de Login**: Fornece uma experiência de login segura e eficiente, incluindo uma opção para recuperação de senha.
+- **Tela de Redefinição de Senha**: Permite aos usuários redefinir suas senhas em caso de esquecimento, facilitando o acesso à conta.
+- **Tela de Resultados**: Exibe uma análise detalhada das emoções dos usuários com base nas respostas fornecidas.
 
 ### Arquitetura do Projeto
 
-O projeto é estruturado da seguinte forma:
+O projeto é organizado da seguinte forma:
 
-- **Controller**: Contém classes responsáveis pela lógica de controle e interação entre o modelo e a visão.
+- **Controller**: Gerencia a lógica de controle e a interação entre os modelos e as vistas, assegurando que a aplicação funcione de forma coesa.
   - `CreateAccountController`
   - `EmotionalScreeningController`
   - `LoginController`
   - `ResetPasswordController`
   - `ResultScreenController`
 
-- **Model**: Contém as classes de modelo que representam os dados e a lógica de negócio.
+- **Model**: Representa os dados e a lógica de negócio, facilitando o gerenciamento e a manipulação das informações.
   - `Auth`
   - `CreateAccountModel`
   - `EmotionModel`
@@ -37,26 +39,23 @@ O projeto é estruturado da seguinte forma:
   - `ResultScreenModel`
   - `UserModel`
 
-- **View**: Contém as classes de visão que gerenciam a interface do usuário e a apresentação das telas.
+- **View**: Cuida da interface do usuário e da apresentação das informações, proporcionando uma experiência visualmente agradável.
   - `CreateAccount`
   - `EmotionalScreening`
   - `Login`
   - `ResetPasswordActivity`
   - `ResultScreen`
 
-- **MainActivity**: Classe principal que inicia o aplicativo.
+- **MainActivity**: A classe principal que inicializa o aplicativo e gerencia seu ciclo de vida.
 
 ### Tecnologias Utilizadas
 
-- **Android Studio**: Ambiente de desenvolvimento integrado para Android.
-- **Kotlin**: Linguagem de programação utilizada para o desenvolvimento do aplicativo.
-- **Firebase**: Plataforma para autenticação e gerenciamento de usuários.
+- **Android Studio**: IDE utilizada para o desenvolvimento Android.
+- **Kotlin**: Linguagem moderna usada para criar o EmotionDecoder.
+- **Firebase**: Plataforma para gerenciamento de autenticação e dados de usuários.
 
 ### Instalação e Execução
 
-1. Clone o repositório: `git clone <URL do repositório>`
-2. Abra o projeto no Android Studio.
-3. Configure o Firebase conforme as instruções em [Firebase Setup](https://firebase.google.com/docs/android/setup).
-4. Compile e execute o aplicativo no emulador ou dispositivo Android.
-
-Para mais informações, consulte a documentação do projeto ou entre em contato com o desenvolvedor.
+1. Clone o repositório:
+   ```bash
+   git clone <URL do repositório>
