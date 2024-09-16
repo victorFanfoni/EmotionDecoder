@@ -14,7 +14,6 @@ class MainActivity : ComponentActivity() {
 
     override fun onStart() {
         super.onStart()
-        // Verifica se o usuário está logado e atualiza a UI de acordo
         val currentUser = authProvider.auth.currentUser
         if (currentUser != null) {
             reload()
@@ -24,8 +23,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // Inicializa o FirebaseAuthProvider
         authProvider = FirebaseAuthProvider()
 
         val buttonStart: Button = findViewById(R.id.button_start)

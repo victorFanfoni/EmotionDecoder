@@ -17,6 +17,8 @@
         android:layout_below="@+id/conteirerTop"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="66dp"
         android:text="@string/como_voc_est_se_sentindo_agora"
@@ -26,13 +28,14 @@
 
     <RadioGroup
         android:id="@+id/radio_group_emocoes"
-        android:layout_width="match_parent"
+        android:layout_width="361dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-         android:layout_marginStart="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="74dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="30dp"
         android:orientation="horizontal">
 
         <RadioButton
@@ -100,6 +103,9 @@
         android:layout_below="@+id/conteirerTop"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
         android:layout_marginStart="72dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="63dp"

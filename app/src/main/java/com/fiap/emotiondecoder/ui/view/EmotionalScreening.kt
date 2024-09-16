@@ -36,7 +36,6 @@ class EmotionalScreening : ComponentActivity() {
             controller.handleEmotionSelection(selectedEmotion, comments)
         }
     }
-
     private fun getSelectedEmotion(): String {
         return when {
             radioAlegria.isChecked -> EmotionModel.EMOTION_HAPPY

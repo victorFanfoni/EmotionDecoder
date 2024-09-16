@@ -5,6 +5,7 @@ import android.content.Intent
 import android.widget.Toast
 import com.fiap.emotiondecoder.ui.model.CreateAccountModel
 import com.fiap.emotiondecoder.ui.model.FirebaseAuthProvider
+import com.fiap.emotiondecoder.ui.view.CreateAccount
 import com.fiap.emotiondecoder.ui.view.Login
 
 class CreateAccountController(private val context: Context) {
@@ -24,23 +25,50 @@ class CreateAccountController(private val context: Context) {
                         val user = authProvider.auth.currentUser
                         user?.sendEmailVerification()?.addOnCompleteListener { verifyTask ->
                             if (verifyTask.isSuccessful) {
-                                Toast.makeText(context, "E-mail de verificação enviado", Toast.LENGTH_LONG).show()
+                                Toast.makeText(
+                                    context,
+                                    "E-mail de verificação enviado",
+                                    Toast.LENGTH_LONG)
+                                    .show()
                             }
                         }
-                        Toast.makeText(context, "Cadastro realizado com sucesso", Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            context,
+                            "Cadastro realizado com sucesso",
+                            Toast.LENGTH_LONG)
+                            .show()
+
                         val intent = Intent(context, Login::class.java)
                         context.startActivity(intent)
-                    } else {
-                        Toast.makeText(context, "Erro ao cadastrar o usuário", Toast.LENGTH_LONG).show()
+                    }
+                    else {
+                        Toast.makeText(
+                            context,
+                            "Erro ao cadastrar o usuário",
+                            Toast.LENGTH_LONG)
+                            .show()
                     }
                 }
-        } else {
-            val errorMessage = when {
-                email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() -> "Preencha todos os campos"
-                password != confirmPassword -> "As senhas não coincidem"
+        }
+        else {
+            val errorMessage =
+                when {
+                    email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() -> "Preencha todos os campos"
+                    password != confirmPassword -> "As senhas não coincidem"
                 else -> "Dados inválidos ou senhas não coincidem"
             }
-            Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
+            Toast.makeText(
+                context,
+                errorMessage,
+                Toast.LENGTH_LONG)
+                .show()
         }
     }
+
+    fun navigateToLogin() {
+        val intent = Intent(context, Login::class.java)
+        context.startActivity(intent)
+        (context as? CreateAccount)?.finish()
+    }
+
 }

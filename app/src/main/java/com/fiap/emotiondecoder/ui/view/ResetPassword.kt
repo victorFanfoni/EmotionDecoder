@@ -10,8 +10,11 @@ import com.fiap.emotiondecoder.ui.controller.ResetPasswordController
 
 class ResetPasswordActivity : ComponentActivity() {
 
+    private lateinit var controller: ResetPasswordController
+
     private lateinit var emailEditText: EditText
     private lateinit var resetPasswordButton: Button
+    private lateinit var voltarLoginButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +22,7 @@ class ResetPasswordActivity : ComponentActivity() {
 
         emailEditText = findViewById(R.id.edit_email)
         resetPasswordButton = findViewById(R.id.buttonResetPassword)
+        voltarLoginButton = findViewById(R.id.VoltaLogin)
 
         resetPasswordButton.setOnClickListener {
             val email = emailEditText.text.toString()
@@ -26,8 +30,15 @@ class ResetPasswordActivity : ComponentActivity() {
                 val resetPasswordController = ResetPasswordController(this)
                 resetPasswordController.sendPasswordResetEmail(email)
             } else {
-                Toast.makeText(this, "Por favor, insira um e-mail válido.", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this,
+                    "Por favor, insira um e-mail válido.",
+                    Toast.LENGTH_LONG)
+                    .show()
             }
+        }
+        voltarLoginButton.setOnClickListener {
+            controller.navigateToLogin()
         }
     }
 }

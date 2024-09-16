@@ -35,9 +35,7 @@ class CreateAccount : ComponentActivity() {
         }
 
         voltarLoginButton.setOnClickListener {
-            val intent = Intent(this, Login::class.java)
-            startActivity(intent)
-            finish()
+            controller.navigateToLogin()
         }
     }
 }

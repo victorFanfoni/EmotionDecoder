@@ -18,19 +18,14 @@ class ResultScreen : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result_screen)
 
-        // Inicializa o controller
         controller = ResultScreenController()
 
-        // Inicializa as views
         textViewRelatorio = findViewById(R.id.textView)
 
-        // Obtém os dados do Intent
         val relatorioCompleto = intent.getStringExtra(getString(R.string.relatorio)) ?: ""
 
-        // Configura o modelo no controlador
         controller.setRelatorio(relatorioCompleto)
 
-        // Exibe o relatório na tela
         textViewRelatorio.text = controller.formatarRelatorio()
 
         val buttonFinalizar = findViewById<Button>(R.id.buttonFinalizar)

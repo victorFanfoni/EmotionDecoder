@@ -5,7 +5,10 @@ import android.content.Intent
 import android.widget.Toast
 import com.fiap.emotiondecoder.ui.model.FirebaseAuthProvider
 import com.fiap.emotiondecoder.ui.model.UserModel
+import com.fiap.emotiondecoder.ui.view.CreateAccount
 import com.fiap.emotiondecoder.ui.view.EmotionalScreening
+import com.fiap.emotiondecoder.ui.view.Login
+import com.fiap.emotiondecoder.ui.view.ResetPasswordActivity
 
 class LoginController(private val context: Context) {
 
@@ -19,22 +22,42 @@ class LoginController(private val context: Context) {
                         val user = authProvider.auth.currentUser
                         updateUI(user)
                         navigateToEmotionalScreening()
-                    } else {
-                        Toast.makeText(context, "Falha na autenticação.", Toast.LENGTH_SHORT).show()
+                    }
+                    else {
+                        Toast.makeText(
+                            context,
+                            "Falha na autenticação.",
+                            Toast.LENGTH_SHORT)
+                            .show()
                         updateUI(null)
                     }
                 }
         } else {
-            Toast.makeText(context, "Por favor, insira um email e senha válidos.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                context,
+                "Por favor, insira um email e senha válidos.",
+                Toast.LENGTH_SHORT)
+                .show()
         }
     }
 
     private fun updateUI(user: Any?) {
-        // Atualizar a interface do usuário aqui, se necessário
     }
 
     private fun navigateToEmotionalScreening() {
         val intent = Intent(context, EmotionalScreening::class.java)
         context.startActivity(intent)
+    }
+
+    fun navigateToCreateAccount() {
+        val intent = Intent(context, CreateAccount::class.java)
+        context.startActivity(intent)
+        (context as? Login)?.finish()
+    }
+
+    fun navigateToResetPassword() {
+        val intent = Intent(context, ResetPasswordActivity::class.java)
+        context.startActivity(intent)
+        (context as? Login)?.finish()
     }
 }

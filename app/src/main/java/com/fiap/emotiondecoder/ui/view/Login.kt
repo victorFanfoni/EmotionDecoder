@@ -36,13 +36,11 @@ class Login : ComponentActivity() {
             controller.signIn(userModel)
         }
         buttonResetPassword.setOnClickListener {
-            val intent = Intent(this, ResetPasswordActivity::class.java)
-            startActivity(intent)
+            controller.navigateToResetPassword()
         }
 
         buttonCreateAccount.setOnClickListener {
-            val intent = Intent(this, CreateAccount::class.java)
-            startActivity(intent)
+            controller.navigateToCreateAccount()
         }
     }
 }

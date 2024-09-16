@@ -30,7 +30,6 @@ class ResultScreenController {
     }
 
     fun formatarRelatorio(): String {
-        // Aqui você pode adicionar qualquer lógica adicional para formatar o relatório antes de exibi-lo
         return model.relatorio
     }
 }
