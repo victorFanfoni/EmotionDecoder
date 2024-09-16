@@ -1,11 +1,11 @@
 # EmotionDecoder
 
 ## Nome dos integrantes:
-Victor Fanfoni RM-99173
-Helena Paixão RM-550929
-Gustavo Costa RM-99102
-Julia Nery RM-552292
-Giulia Pina RM-97694
+- **Victor Fanfoni RM-99173
+- **Helena Paixão RM-550929
+- **Gustavo Costa RM-99102
+- **Julia Nery RM-552292
+- **Giulia Pina RM-97694
 ## Explanação do Projeto
 
 **EmotionDecoder** é um aplicativo Android desenvolvido com o objetivo de analisar e interpretar emoções dos usuários. O aplicativo adota o padrão MVC (Model-View-Controller) para uma clara separação de responsabilidades e uma arquitetura organizada. 
