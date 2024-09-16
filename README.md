@@ -22,6 +22,8 @@
 
 ### Arquitetura do Projeto
 
+![Diagrama_sprint3](https://github.com/user-attachments/assets/df04352a-ec96-4a47-8588-8bf7cf6b7006)
+
 O projeto é organizado da seguinte forma:
 
 - **Controller**: Gerencia a lógica de controle e a interação entre os modelos e as vistas, assegurando que a aplicação funcione de forma coesa.
