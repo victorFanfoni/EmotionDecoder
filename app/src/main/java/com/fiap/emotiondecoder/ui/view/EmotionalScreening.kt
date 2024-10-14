@@ -1,10 +1,13 @@
 package com.fiap.emotiondecoder.ui.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.RadioButton
 import androidx.activity.ComponentActivity
+import com.fiap.emotiondecoder.Home
 import com.fiap.emotiondecoder.R
 import com.fiap.emotiondecoder.ui.controller.EmotionalScreeningController
 import com.fiap.emotiondecoder.ui.model.EmotionModel
@@ -25,10 +28,16 @@ class EmotionalScreening : ComponentActivity() {
 
         val buttonEnviar = findViewById<Button>(R.id.button_enviar)
         val editComentarios = findViewById<EditText>(R.id.edit_comentarios)
+        val buttonVoltarHome = findViewById<ImageButton>(R.id.VoltarHome)
         radioAlegria = findViewById(R.id.radio_alegria)
         radioTristeza = findViewById(R.id.radio_tristeza)
         radioRaiva = findViewById(R.id.radio_raiva)
         radioMedo = findViewById(R.id.radio_medo)
+
+        buttonVoltarHome.setOnClickListener{
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
+        }
 
         buttonEnviar.setOnClickListener {
             val selectedEmotion = getSelectedEmotion()

@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmotionDecoder"
-        tools:targetApi="31">
+        >
 
         <activity
             android:name=".MainActivity"
@@ -31,11 +31,10 @@
         <activity android:name=".ui.view.EmotionalScreening" />
         <activity android:name=".ui.view.ResultScreen" />
         <activity android:name=".ui.view.Login" />
-        <activity android:name=".ui.controller.ResetPasswordController" />
-        <activity android:name=".ui.controller.EmotionalScreeningController" />
-        <activity android:name=".ui.controller.ResultScreenController" />
-
-
+        <activity android:name=".Home"
+            android:exported="true"
+            />
+        <activity android:name=".ui.view.UpdateActivity"/>
 
     </application>
 

@@ -83,4 +83,7 @@
     <string name="esqueceu_a_senha">Esqueceu a Senha?</string>
     <string name="voltar_para_login">Voltar para Login</string>
     <string name="rosto_triste">rosto Triste</string>
+    <string name="ir_para_triagem">Ir para Triagem</string>
+    <string name="atualizar_cadastro">Atualizar Cadastro</string>
+    <string name="sair">Sair</string>
 </resources>

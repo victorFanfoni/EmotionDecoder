@@ -3,10 +3,10 @@ package com.fiap.emotiondecoder.ui.controller
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
+import com.fiap.emotiondecoder.Home
 import com.fiap.emotiondecoder.ui.model.FirebaseAuthProvider
 import com.fiap.emotiondecoder.ui.model.UserModel
 import com.fiap.emotiondecoder.ui.view.CreateAccount
-import com.fiap.emotiondecoder.ui.view.EmotionalScreening
 import com.fiap.emotiondecoder.ui.view.Login
 import com.fiap.emotiondecoder.ui.view.ResetPasswordActivity
 
@@ -45,7 +45,7 @@ class LoginController(private val context: Context) {
     }
 
     private fun navigateToEmotionalScreening() {
-        val intent = Intent(context, EmotionalScreening::class.java)
+        val intent = Intent(context, Home::class.java)
         context.startActivity(intent)
     }
 
