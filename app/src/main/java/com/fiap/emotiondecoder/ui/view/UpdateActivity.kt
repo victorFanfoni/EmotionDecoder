@@ -16,31 +16,27 @@ class UpdateActivity : ComponentActivity() {
     private lateinit var confirmPasswordEditText: EditText
     private lateinit var saveButton: Button
     private lateinit var deleteButton: Button
-    private lateinit var updateController: UpdateController
     private lateinit var voltar: Button
+    private lateinit var updateController: UpdateController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update)
 
-        // Inicializar views
-        emailEditText = findViewById(R.id.editTextTextEmailAddress)
-        passwordEditText = findViewById(R.id.editTextTextPassword)
-        confirmPasswordEditText = findViewById(R.id.editTextTextPassword2)
+        emailEditText = findViewById(R.id.edit_email)
+        passwordEditText = findViewById(R.id.edit_senha)
+        confirmPasswordEditText = findViewById(R.id.edit_confirm_senha)
         saveButton = findViewById(R.id.button)
         deleteButton = findViewById(R.id.button2)
         voltar = findViewById(R.id.button3)
 
-        // Inicializar o controlador
         updateController = UpdateController(this)
 
-        // Ler os dados atuais do usuário
         val currentUser = updateController.authProvider.auth.currentUser
         currentUser?.let {
             emailEditText.setText(it.email)
         }
 
-        // Configurar botão de salvar
         saveButton.setOnClickListener {
             val newEmail = emailEditText.text.toString().trim()
             val newPassword = passwordEditText.text.toString().trim()
@@ -48,19 +44,15 @@ class UpdateActivity : ComponentActivity() {
             updateController.updateUser(newEmail, newPassword, confirmPassword)
         }
 
-        // Configurar botão de deletar
         deleteButton.setOnClickListener {
             updateController.deleteUser()
-            // Redirecionar para a tela de login, caso a conta seja deletada
             startActivity(Intent(this, Login::class.java))
             finish()
         }
 
         voltar.setOnClickListener {
-            val intent = Intent(this, Home::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, Home::class.java))
             finish()
         }
-
     }
 }

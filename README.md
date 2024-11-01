@@ -36,7 +36,6 @@
 
 ## Arquitetura do Projeto
 
-![Diagrama da Arquitetura](https://github.com/user-attachments/assets/df04352a-ec96-4a47-8588-8bf7cf6b7006)
 
 O projeto é estruturado da seguinte maneira:
 
